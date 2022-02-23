@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- ===== CSS ===== -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+        <title>Document</title>
+    </head>
+    <body id="body-pd"> 
+        <header class="header" id="header">
+            <div class="header__toggle">
+                <i class='bx bx-menu myopenclose' id="header-toggle"></i>
+            </div>
+            <div class="header__img">
+                <img class="kct-logo" src="images/logo.png">
+            </div>
+        </header> 
+
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div>
+                    <div class="mylogocloseflex">
+                        <a href="#" class="nav__logo">
+                            <img src="images/kct-logo.png" alt="" >
+                            <span class="nav__logo-name">KCT-Admission</span>
+                        </a>
+                        <div class="myclosebtn">
+                            <i class='bx bx-menu bx-x' id="header-close-toggle"></i>
+                        </div>
+                    </div>
+                    
+
+                    <div class="nav__list">
+                        <a href="#" class="nav__link active-link">
+                            <i class='bx bx-grid-alt nav__icon' ></i>
+                            
+                            <span class="nav__name">Dashboard</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-stopwatch nav__icon'></i>
+                            <span class="nav__name">Campaigns</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-message-square-detail nav__icon' ></i>
+                            <span class="nav__name">Notification</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-list-ul nav__icon'></i>
+                            <span class="nav__name">Lists</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-bar-chart-alt-2 nav__icon' ></i>
+                            <span class="nav__name">Analytics</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-mail-send nav__icon'></i>
+                            <span class="nav__name">Support</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="#" class="nav__link">
+                    <i class='bx bx-log-out nav__icon' ></i>
+                    <span class="nav__name">Log Out</span>
+                </a>
+            </nav>
+        </div>
+        <main>
+          
+            <!--Block contents here-->
+            
+            <div class="mycontainer">
+                <div class="form-header">
+                    <h1 class="form-heading">TNEA ALLOTMENT DETAILS</h1>
+                </div>
+                <div class="myform">
+                    <div class="progress-container">
+                        <div class="progress" id="progress"></div>
+                        <div class="circles">1</div>
+                        <div class="circles">2</div>
+                        <div class="circles">3</div>
+                        <div class="circles">4</div>
+                        <div class="circles">5</div>
+                        <div class="circles">6</div>
+                        <div class="circles active">7</div>
+                        <div class="circles">8</div>
+                        <div class="circles">9</div>
+                        <div class="circles">10</div>
+                      </div>
+                      
+                    <form method="POST">
+                        <div class="form-container">
+                            <div class="input-field">
+                                <label  class="labels required" for="tnea_application_no">TNEA Application No <span></span></label>
+                                <input type="text" id="tnea_application_no" name="tnea_application_no" onchange="tnea_application_noInputHandler()" required >
+                            </div>
+        
+                            <div class="input-field">
+                                <label  class="labels required" for="tnea_allotment_no">TNEA Allotment No <span></span></label>
+                                <input type="text" id="tnea_allotment_no" name="tnea_allotment_no" onchange="tnea_allotment_noInputHandler()" required >
+                            </div>
+        
+                            <div class="input-field">
+                                <label class="labels required" for="tnea_community" >Community Alloted in TNEA<span></span></label>
+                                <select name="tnea_community" id="tnea_community" required onchange="tnea_communityInputHandler()">
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="OC">OC</option>
+                                    <option value="BC">BC</option>
+                                    <option value="MBC">MBC</option>
+                                    <option value="BCM">BCM</option>
+                                    <option value="SC">SC</option>
+                                    <option value="ST">ST</option>
+                                    <option value="SCA">SCA</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+        
+                            <div class="input-field">
+                                <label class="labels required" for="overall_rank">Overall Rank<span></span></label>
+                                <input type="number" id="overall_rank" name="overall_rank" min="1" onchange="overall_rankInputHandler()" required>
+                            </div>
+        
+                            <div class="input-field">
+                                <label class="labels required" for="community_rank">Community Rank<span></span></label>
+                                <input type="number" id="community_rank" name="community_rank" min="1" onchange="community_rankInputHandler()" required>
+                            </div>
+                            
+                            
+                            
+                        </div>
+                        <div class="mybutton-container">
+                            <a href=""><button class="btn" id="prev">Prev</button></a> 
+                            <a href=""><button class="btn" id="next">Next</button></a>  
+                        </div>
+                        
+                    </form>
+                </div>
+        
+                </form>
+            </div>
+
+        </main>
+        
+        <!--===== MAIN JS =====-->
+        <script src="js/main.js"></script>
+        <script type="text/javascript" src="js/form.js" ></script>
+    </body>
+</html>
+

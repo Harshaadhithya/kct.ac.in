@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- ===== CSS ===== -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <title>Document</title>
+    </head>
+    <body id="body-pd"> 
+
+        <header class="header" id="header">
+            <div class="header__toggle">
+                <i class='bx bx-menu myopenclose' id="header-toggle"></i>
+            </div>
+            <div class="header__img">
+                <img class="kct-logo" src="images/logo.png">
+            </div>
+        </header> 
+
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div>
+                    <div class="mylogocloseflex">
+                        <a href="#" class="nav__logo">
+                            <img src="images/kct-logo.png" alt="" >
+                            <span class="nav__logo-name">KCT-Admission</span>
+                        </a>
+                        <div class="myclosebtn">
+                            <i class='bx bx-menu bx-x' id="header-close-toggle"></i>
+                        </div>
+                    </div>
+                    
+
+                    <div class="nav__list" style="text-decoration: none;">
+                        <a href="#" class="nav__link active-link">
+                            <i class='bx bx-grid-alt nav__icon' ></i>
+                            
+                            <span class="nav__name">Dashboard</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-stopwatch nav__icon'></i>
+                            <span class="nav__name">Campaigns</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-message-square-detail nav__icon' ></i>
+                            <span class="nav__name">Notification</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-list-ul nav__icon'></i>
+                            <span class="nav__name">Lists</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-bar-chart-alt-2 nav__icon' ></i>
+                            <span class="nav__name">Analytics</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-mail-send nav__icon'></i>
+                            <span class="nav__name">Support</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="#" class="nav__link">
+                    <i class='bx bx-log-out nav__icon' ></i>
+                    <span class="nav__name">Log Out</span>
+                </a>
+            </nav>
+        </div>
+        <main>
+            <div class="mycontainer">
+                <div class="form-header">
+                    <h1 class="form-heading">PERSONAL DETAILS</h1>
+                </div>
+                <div class="myform">
+                    <div class="progress-container">
+                        <div class="progress" id="progress"></div>
+                        <div class="circles">1</div>
+                        <div class="circles active">2</div>
+                        <div class="circles">3</div>
+                        <div class="circles">4</div>
+                        <div class="circles">5</div>
+                        <div class="circles">6</div>
+                        <div class="circles">7</div>
+                        <div class="circles">8</div>
+                        <div class="circles">9</div>
+                        <div class="circles">10</div>
+                      </div>
+                      
+                    <form method="POST">
+                        <div class="form-container file-form">
+                            <div class="input-field file-input">
+                                <label  class="labels file-input-label required" for="photo">Photo<span class="input-helper">( Size: 2MB, Type: jpg, png, gif  )</span></label>
+                                <div class="file-input-with-clear">
+                                    <input class="file-input-box" type="file" id="photo" name="photo"  accept="image/jpeg,image/png" onchange="InputHandler()" required >   
+                                    <button id="clear-btn" class="btn clear-btn" style="font-size: 10px; padding:4px 10px">Clear</button>
+                                </div>
+                                
+                            </div>
+                            
+                           
+                            <div class="input-field file-input">
+                                <label  class="labels file-input-label required" for="x_marksheet">X Mark Sheet<span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                <div class="file-input-with-clear">
+                                    <input class="file-input-box" type="file" id="x_marksheet" name="x_marksheet"  accept="application/pdf,application/msword" onchange="InputHandler()" required >   
+                                    <button id="clear-btn" class="btn clear-btn" style="font-size: 10px; padding:4px 10px">Clear</button>
+                                </div>
+                            </div>
+
+                            <div class="input-field file-input">
+                                <label  class="labels file-input-label " for="xi_marksheet">XI Mark Sheet<span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                <div class="file-input-with-clear">
+                                    <input class="file-input-box" type="file" id="xi_marksheet" name="xi_marksheet" accept="application/pdf,application/msword" onchange="InputHandler()">  
+                                    <button id="clear-btn" class="btn clear-btn" style="font-size: 10px; padding:4px 10px">Clear</button>
+                                </div> 
+                            </div>
+
+                            <div class="input-field file-input">
+                                <label  class="labels file-input-label " for="xii_marksheet">XII Mark Sheet<span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                <div class="file-input-with-clear">
+                                    <input class="file-input-box" type="file" id="xii_marksheet" name="xii_marksheet"  accept="application/pdf,application/msword" onchange="InputHandler()" >  
+                                    <button id="clear-btn" class="btn clear-btn" style="font-size: 10px; padding:4px 10px">Clear</button>
+                                </div>  
+                            </div>
+                            
+                            <div class="input-field file-input">
+                                <label  class="labels file-input-label " for="migration_certificate">Migration Certificate, If applicable<span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                <div class="file-input-with-clear">
+                                    <input class="file-input-box" type="file" id="migration_certificate" name="migration_certificate"  accept="application/pdf,application/msword" onchange="InputHandler()"  >   
+                                    <button id="clear-btn" class="btn clear-btn" style="font-size: 10px; padding:4px 10px">Clear</button>
+                                </div>  
+                            </div>
+        
+                            <div class="input-field file-input">
+                                <label  class="labels file-input-label required" for="transfer_certificate">Transfer Certificate (TC)<span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                <div class="file-input-with-clear">
+                                    <input class="file-input-box" type="file" id="transfer_certificate" name="transfer_certificate"  accept="application/pdf,application/msword" onchange="InputHandler()" required >   
+                                    <button id="clear-btn" class="btn clear-btn" style="font-size: 10px; padding:4px 10px">Clear</button>
+                                </div>  
+                            </div>
+
+                            <div class="input-field file-input">
+                                <label  class="labels file-input-label required" for="bank_passbook">Bank passbook front page / Cancelled cheque leaf<span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                <div class="file-input-with-clear">
+                                    <input class="file-input-box" type="file" id="bank_passbook" name="bank_passbook"  accept="application/pdf,application/msword" onchange="InputHandler()" required >   
+                                    <button id="clear-btn" class="btn clear-btn" style="font-size: 10px; padding:4px 10px">Clear</button>
+                                </div> 
+                            </div>
+
+                            <div class="input-field file-input">
+                                <label  class="labels file-input-label " for="community_certificate">Community Certificate (If Applicable)<span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                <div class="file-input-with-clear">
+                                    <input class="file-input-box" type="file" id="community_certificate" name="community_certificate"  accept="application/pdf,application/msword" onchange="InputHandler()"  >   
+                                    <button id="clear-btn" class="btn clear-btn" style="font-size: 10px; padding:4px 10px">Clear</button>
+                                </div> 
+                            </div>
+
+                            <div class="input-field file-input">
+                                <label  class="labels file-input-label required" for="aadhar_card">Aadhar Card <span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                <div class="file-input-with-clear">
+                                    <input class="file-input-box" type="file" id="aadhar_card" name="aadhar_card"  accept="application/pdf,application/msword" onchange="InputHandler()" required >   
+                                    <button id="clear-btn" class="btn clear-btn" style="font-size: 10px; padding:4px 10px">Clear</button>
+                                </div> 
+                            </div>
+
+                            <div class="input-field file-input">
+                                <label  class="labels file-input-label " for="tnea_allotment_order">TNEA Allotment Order<span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                <div class="file-input-with-clear">
+                                    <input class="file-input-box" type="file" id="tnea_allotment_order" name="tnea_allotment_order"  accept="application/pdf,application/msword" onchange="InputHandler()"  >   
+                                    <button id="clear-btn" class="btn clear-btn" style="font-size: 10px; padding:4px 10px">Clear</button>
+                                </div> 
+                            </div>
+
+                            <div class="input-field file-input">
+                                <label  class="labels file-input-label " for="first_graduate_certificate">First Graduate Certificate<span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                <div class="file-input-with-clear">
+                                    <input class="file-input-box" type="file" id="first_graduate_certificate" name="first_graduate_certificate"  accept="application/pdf,application/msword" onchange="InputHandler()"  >   
+                                    <button id="clear-btn" class="btn clear-btn" style="font-size: 10px; padding:4px 10px">Clear</button>
+                                </div> 
+                            </div>
+
+                            <div class="input-field file-input">
+                                <label  class="labels file-input-label " for="joint_declarartion_form">First Graduate / Joint Declaration Form<span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                <div class="file-input-with-clear">
+                                    <input class="file-input-box" type="file" id="joint_declarartion_form" name="joint_declarartion_form"  accept="application/pdf,application/msword" onchange="InputHandler()"  >   
+                                    <button id="clear-btn" class="btn clear-btn" style="font-size: 10px; padding:4px 10px">Clear</button>
+                                </div> 
+                            </div>
+
+                            <div class="input-field file-input">
+                                <label  class="labels file-input-label " for="salary_certificate">Income Certificate / Salaray Certificate (If salary is Below 2.5 Lakhs)<span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                <div class="file-input-with-clear">
+                                    <input class="file-input-box" type="file" id="salary_certificate" name="salary_certificate"  accept="application/pdf,application/msword" onchange="InputHandler()"  >   
+                                    <button id="clear-btn" class="btn clear-btn" style="font-size: 10px; padding:4px 10px">Clear</button>
+                                </div> 
+                            </div>
+
+                        </div>
+                        <div class="mybutton-container">
+                            <div class="left-button">
+                                <button class="btn" id="prev" onclick="PrevNextHandler(event)">Prev</button>
+                                <button class="btn" id="next" onclick="PrevNextHandler(event)">Next</button>
+                            </div>
+                    
+                        </div>  
+                        
+                    </form>
+                </div>
+        
+                
+            </div>
+         </main>
+        
+        <!--===== MAIN JS =====-->
+        <script src="js/main.js"></script>
+        <script type="text/javascript" src="js/form.js" ></script>
+    </body>
+</html>
+

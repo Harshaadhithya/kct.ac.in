@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- ===== CSS ===== -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <title>Document</title>
+    </head>
+    <body id="body-pd"> 
+
+        <header class="header" id="header">
+            <div class="header__toggle">
+                <i class='bx bx-menu myopenclose' id="header-toggle"></i>
+            </div>
+            <div class="header__img">
+                <img class="kct-logo" src="images/logo.png">
+            </div>
+        </header> 
+
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div>
+                    <div class="mylogocloseflex">
+                        <a href="#" class="nav__logo">
+                            <img src="images/kct-logo.png" alt="" >
+                            <span class="nav__logo-name">KCT-Admission</span>
+                        </a>
+                        <div class="myclosebtn">
+                            <i class='bx bx-menu bx-x' id="header-close-toggle"></i>
+                        </div>
+                    </div>
+                    
+
+                    <div class="nav__list" style="text-decoration: none;">
+                        <a href="#" class="nav__link active-link">
+                            <i class='bx bx-grid-alt nav__icon' ></i>
+                            
+                            <span class="nav__name">Dashboard</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-stopwatch nav__icon'></i>
+                            <span class="nav__name">Campaigns</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-message-square-detail nav__icon' ></i>
+                            <span class="nav__name">Notification</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-list-ul nav__icon'></i>
+                            <span class="nav__name">Lists</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-bar-chart-alt-2 nav__icon' ></i>
+                            <span class="nav__name">Analytics</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-mail-send nav__icon'></i>
+                            <span class="nav__name">Support</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="#" class="nav__link">
+                    <i class='bx bx-log-out nav__icon' ></i>
+                    <span class="nav__name">Log Out</span>
+                </a>
+            </nav>
+        </div>
+        <main>
+            <div class="mycontainer">
+                <div class="form-header">
+                    <h1 class="form-heading">PERSONAL DETAILS</h1>
+                </div>
+                <div class="myform">
+                    <div class="progress-container">
+                        <div class="progress" id="progress"></div>
+                        <div class="circles">1</div>
+                        <div class="circles active">2</div>
+                        <div class="circles">3</div>
+                        <div class="circles">4</div>
+                        <div class="circles">5</div>
+                        <div class="circles">6</div>
+                        <div class="circles">7</div>
+                        <div class="circles">8</div>
+                        <div class="circles">9</div>
+                        <div class="circles">10</div>
+                      </div>
+                      
+                    <form method="POST">
+                        <div class="form-container">
+                            <div class="input-field">
+                                <label  class="labels required" for="name">Name of the Student <span class="input-helper">(Enter your name first and initial last)</span></label>
+                                <input type="text" id="name" name="name" onchange="nameInputHandler()" required >
+                            </div>
+                            <div class="input-field">
+                                <label class="labels required" for="dob">Date Of Birth<span></span></label>
+                                <input type="date" id="date" min="1998-01-01" max="2022-12-12" name="date" onchange="dateInputHandler()" required>
+                            </div>
+                            
+                            
+                            <div class="input-field">
+                                <label class="labels required" for="gender">Gender<span></span></label>
+                                <select name="gender" id="gender" onchange="genderInputHandler()" required>
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+        
+                            <div class="input-field">
+                                <label class="labels required" for="nationality">Nationality<span></span></label>
+                                <select name="nationality" id="nationality" onchange="nationalityInputHandler()" required >
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="Afganisthan">Afganisthan</option>
+                                    <option value="Belgium">Belgium</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="india">India</option>
+                                </select>
+                            </div>
+        
+                            <div class="input-field">
+                                <label class="labels required" for="community" >Community<span></span></label>
+                                <select name="community" id="community" required onchange="communityInputHandler()">
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="OC">OC</option>
+                                    <option value="BC">BC</option>
+                                    <option value="MBC">MBC</option>
+                                    <option value="BCM">BCM</option>
+                                    <option value="SC">SC</option>
+                                    <option value="ST">ST</option>
+                                    <option value="SCA">SCA</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+        
+                            <div class="input-field">
+                                <label class="labels required" for="religion">Religion<span></span></label>
+                                <select name="religion" id="religion" required onchange="religionInputHandler()">
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="Hindu">Hindu</option>
+                                    <option value="Muslim">Muslim</option>
+                                    <option value="Christian">Christian</option>
+                                    <option value="Sikh">Sikh</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+        
+                            <div class="input-field">
+                                <label class="labels required" for="caste">Caste<span></span></label>
+                                <select name="caste" id="caste"  required onchange="casteInputHandler()">
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="Caste-1">Caste-1</option>
+                                    <option value="Caste-2">Caste-2</option>
+                                    <option value="Caste-3">Caste-3</option>
+                                    <option value="Caste-4">Caste-4</option>
+                                    <option value="Caste-5">Caste-5</option>
+                                </select>
+                            </div>
+                            <div class="input-field input-field-radio">
+                                <label class="labels required" for="aadhar">Sample radio<span></span></label>
+                                <div class="radio-flex">
+                                    <div class="radio-inner">
+                                        <input type="radio" id="radio-1" name="fav_language" value="HTML">
+                                        <label for="html">radio-1</label><br>
+                                    </div>
+                                    <div class="radio-inner">
+                                        <input type="radio" id="radio-2" name="fav_language" value="CSS">
+                                        <label for="css">radio-2</label><br>
+                                    </div>
+                                    <div class="radio-inner">
+                                        <input type="radio" id="radio-3" name="fav_language" value="JavaScript">
+                                        <label for="javascript">radio-3</label>
+                                    </div>  
+                                    <div class="radio-inner">
+                                        <input type="radio" id="radio-4" name="fav_language" value="JavaScript">
+                                        <label for="javascript">radio-4</label>
+                                    </div> 
+                                    <div class="radio-inner">
+                                        <input type="radio" id="radio-5" name="fav_language" value="JavaScript">
+                                        <label for="javascript">radio-5</label>
+                                    </div>                           
+                                </div>
+                                
+                            </div>
+        
+                            <div class="input-field">
+                                <label class="labels required" for="contact" required>Mobile No<span></span></label>
+                                <input type="tel" id="contact" name="contact" onchange="contactInputHandler()">
+                            </div>
+                            <div class="input-field">
+                                <label class="labels required" for="email">Email<span></span></label>
+                                <input type="email" id="email" name="email" required onchange="emailInputHandler()">
+                            </div>
+                            <div class="input-field">
+                                <label class="labels required" for="aadhar">Aadhar No<span></span></label>
+                                <input type="text" id="aadhar" name="aadhar" required onchange="aadharInputHandler()">
+                            </div>
+                            
+        
+                            <div class="input-field">
+                                <label class="labels required" for="blood">Blood Group<span></span></label>
+                                <select name="blood" required id="blood" onchange="bloodInputHandler()">
+                                    <option value="" selected disabled >---Select---</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="B+">B+</option>
+                                </select>
+                            </div>
+        
+        
+                        </div>
+                        <div class="mybutton-container">
+                            <button class="btn" id="prev" disabled>Prev</button>
+                            <button class="btn" id="next">Next</button>
+                        </div>
+                        
+                    </form>
+                </div>
+        
+                
+            </div>
+         </main>
+        
+        <!--===== MAIN JS =====-->
+        <script src="js/main.js"></script>
+        <script type="text/javascript" src="js/form.js" ></script>
+    </body>
+</html>
+

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- ===== CSS ===== -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+        <title>Document</title>
+    </head>
+    <body id="body-pd"> 
+        <header class="header" id="header">
+            <div class="header__toggle">
+                <i class='bx bx-menu myopenclose' id="header-toggle"></i>
+            </div>
+            <div class="header__img">
+                <img class="kct-logo" src="images/logo.png">
+            </div>
+        </header> 
+
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div>
+                    <div class="mylogocloseflex">
+                        <a href="#" class="nav__logo">
+                            <img src="images/kct-logo.png" alt="" >
+                            <span class="nav__logo-name">KCT-Admission</span>
+                        </a>
+                        <div class="myclosebtn">
+                            <i class='bx bx-menu bx-x' id="header-close-toggle"></i>
+                        </div>
+                    </div>
+                    
+
+                    <div class="nav__list">
+                        <a href="#" class="nav__link active-link">
+                            <i class='bx bx-grid-alt nav__icon' ></i>
+                            
+                            <span class="nav__name">Dashboard</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-stopwatch nav__icon'></i>
+                            <span class="nav__name">Campaigns</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-message-square-detail nav__icon' ></i>
+                            <span class="nav__name">Notification</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-list-ul nav__icon'></i>
+                            <span class="nav__name">Lists</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-bar-chart-alt-2 nav__icon' ></i>
+                            <span class="nav__name">Analytics</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-mail-send nav__icon'></i>
+                            <span class="nav__name">Support</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="#" class="nav__link">
+                    <i class='bx bx-log-out nav__icon' ></i>
+                    <span class="nav__name">Log Out</span>
+                </a>
+            </nav>
+        </div>
+        <main>
+          
+            <!--Block contents here-->
+            <div class="mycontainer">
+                <div class="form-header">
+                    <h1 class="form-heading">Course Preference</h1>
+                </div>
+                <div class="myform">
+                    <div class="progress-container">
+                        <div class="progress" id="progress"></div>
+                        <div class="circles">1</div>
+                        <div class="circles active">2</div>
+                        <div class="circles">3</div>
+                        <div class="circles">4</div>
+                        <div class="circles">5</div>
+                        <div class="circles">6</div>
+                        <div class="circles">7</div>
+                        <div class="circles">8</div>
+                        <div class="circles">9</div>
+                        <div class="circles">10</div>
+                      </div>
+                      
+                    <form method="POST">
+                        <div class="form-container">
+                            
+                            
+                            <div class="input-field">
+                                <label class="labels required" for="quota">Quota<span></span></label>
+                                <select name="quota" id="quota" onchange="quotaInputHandler()" required>
+                                    <option value="" selected disabled hidden>---Select---</option>
+                                    <option value="Government Quota Academics">Government Quota Academics</option>
+                                    <option value="Government Quota Vocational">Government Quota Vocational</option>
+                                    <option value="Government Quota Vocational">Management Quota</option>
+                                    <option value="Government Quota Vocational">NRI</option>
+                                </select>
+                            </div>
+        
+                            <div class="input-field">
+                                <label class="labels required" for="first_preference">First Preference<span></span></label>
+                                <select name="first_preference" id="first_preference" onchange="first_preferenceInputHandler()" required >
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="B.E - AERONAUTICAL ENGINEERING">B.E - AERONAUTICAL ENGINEERING</option>
+                                    <option value="B.E - AUTOMOBILE ENGINEERING">B.E - AUTOMOBILE ENGINEERING</option>
+                                    <option value="B.Tech - BIO-TECHNOLOGY">B.Tech - BIO-TECHNOLOGY</option>
+                                    <option value="B.E - CIVIL ENGINEERING">B.E - CIVIL ENGINEERING</option>
+                                    <option value="B.E - COMPUTER SCIENCE AND ENGINEERING">B.E - COMPUTER SCIENCE AND ENGINEERING</option>
+                                    <option value="B.E - ELECTRONICS AND COMMUNICATION ENGINEERING">B.E - ELECTRONICS AND COMMUNICATION ENGINEERING</option>
+                                    <option value="B.E - ELECTRICAL AND ELECTRONICS ENGINEERING">B.E - ELECTRICAL AND ELECTRONICS ENGINEERING</option>
+                                    <option value="B.E - ELECTRONICS AND INSTRUMENTATION ENGINEERING">B.E - ELECTRONICS AND INSTRUMENTATION ENGINEERING</option>
+                                    <option value="B.Tech - FASHION TECHNOLOGY">B.Tech - FASHION TECHNOLOGY</option>
+                                    <option value="B.Tech - INFORMATION TECHNOLOGY">B.Tech - INFORMATION TECHNOLOGY</option>
+                                    <option value="B.E - MECHATRONICS ENGINEERING">B.E - MECHATRONICS ENGINEERING</option>
+                                    <option value="B.E - MECHANICAL ENGINEERING">B.E - MECHANICAL ENGINEERING</option>
+                                    <option value="B.Tech - TEXTILE TECHNOLOGY">B.Tech - TEXTILE TECHNOLOGY</option>
+                                    <option value="B.Tech - ARTIFICIAL INTELLIGENCE AND DATA SCIENCE">B.Tech - ARTIFICIAL INTELLIGENCE AND DATA SCIENCE</option>
+                                    <option value="B.E - INFORMATION SCIENCE AND ENGINEERING">B.E - INFORMATION SCIENCE AND ENGINEERING</option>
+                                </select>
+                            </div>
+        
+                            <div class="input-field">
+                                <label class="labels required" for="second_preference" >Second Preference<span></span></label>
+                                <select name="second_preference" id="second_preference" required onchange="second_preferenceInputHandler()">
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="B.E - AERONAUTICAL ENGINEERING">B.E - AERONAUTICAL ENGINEERING</option>
+                                    <option value="B.E - AUTOMOBILE ENGINEERING">B.E - AUTOMOBILE ENGINEERING</option>
+                                    <option value="B.Tech - BIO-TECHNOLOGY">B.Tech - BIO-TECHNOLOGY</option>
+                                    <option value="B.E - CIVIL ENGINEERING">B.E - CIVIL ENGINEERING</option>
+                                    <option value="B.E - COMPUTER SCIENCE AND ENGINEERING">B.E - COMPUTER SCIENCE AND ENGINEERING</option>
+                                    <option value="B.E - ELECTRONICS AND COMMUNICATION ENGINEERING">B.E - ELECTRONICS AND COMMUNICATION ENGINEERING</option>
+                                    <option value="B.E - ELECTRICAL AND ELECTRONICS ENGINEERING">B.E - ELECTRICAL AND ELECTRONICS ENGINEERING</option>
+                                    <option value="B.E - ELECTRONICS AND INSTRUMENTATION ENGINEERING">B.E - ELECTRONICS AND INSTRUMENTATION ENGINEERING</option>
+                                    <option value="B.Tech - FASHION TECHNOLOGY">B.Tech - FASHION TECHNOLOGY</option>
+                                    <option value="B.Tech - INFORMATION TECHNOLOGY">B.Tech - INFORMATION TECHNOLOGY</option>
+                                    <option value="B.E - MECHATRONICS ENGINEERING">B.E - MECHATRONICS ENGINEERING</option>
+                                    <option value="B.E - MECHANICAL ENGINEERING">B.E - MECHANICAL ENGINEERING</option>
+                                    <option value="B.Tech - TEXTILE TECHNOLOGY">B.Tech - TEXTILE TECHNOLOGY</option>
+                                    <option value="B.Tech - ARTIFICIAL INTELLIGENCE AND DATA SCIENCE">B.Tech - ARTIFICIAL INTELLIGENCE AND DATA SCIENCE</option>
+                                    <option value="B.E - INFORMATION SCIENCE AND ENGINEERING">B.E - INFORMATION SCIENCE AND ENGINEERING</option>
+                                </select>
+                            </div>
+        
+                            <div class="input-field">
+                                <label class="labels required" for="third_preference">Third Preference<span></span></label>
+                                <select name="third_preference" id="third_preference" required onchange="third_preferenceInputHandler()">
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="B.E - AERONAUTICAL ENGINEERING">B.E - AERONAUTICAL ENGINEERING</option>
+                                    <option value="B.E - AUTOMOBILE ENGINEERING">B.E - AUTOMOBILE ENGINEERING</option>
+                                    <option value="B.Tech - BIO-TECHNOLOGY">B.Tech - BIO-TECHNOLOGY</option>
+                                    <option value="B.E - CIVIL ENGINEERING">B.E - CIVIL ENGINEERING</option>
+                                    <option value="B.E - COMPUTER SCIENCE AND ENGINEERING">B.E - COMPUTER SCIENCE AND ENGINEERING</option>
+                                    <option value="B.E - ELECTRONICS AND COMMUNICATION ENGINEERING">B.E - ELECTRONICS AND COMMUNICATION ENGINEERING</option>
+                                    <option value="B.E - ELECTRICAL AND ELECTRONICS ENGINEERING">B.E - ELECTRICAL AND ELECTRONICS ENGINEERING</option>
+                                    <option value="B.E - ELECTRONICS AND INSTRUMENTATION ENGINEERING">B.E - ELECTRONICS AND INSTRUMENTATION ENGINEERING</option>
+                                    <option value="B.Tech - FASHION TECHNOLOGY">B.Tech - FASHION TECHNOLOGY</option>
+                                    <option value="B.Tech - INFORMATION TECHNOLOGY">B.Tech - INFORMATION TECHNOLOGY</option>
+                                    <option value="B.E - MECHATRONICS ENGINEERING">B.E - MECHATRONICS ENGINEERING</option>
+                                    <option value="B.E - MECHANICAL ENGINEERING">B.E - MECHANICAL ENGINEERING</option>
+                                    <option value="B.Tech - TEXTILE TECHNOLOGY">B.Tech - TEXTILE TECHNOLOGY</option>
+                                    <option value="B.Tech - ARTIFICIAL INTELLIGENCE AND DATA SCIENCE">B.Tech - ARTIFICIAL INTELLIGENCE AND DATA SCIENCE</option>
+                                    <option value="B.E - INFORMATION SCIENCE AND ENGINEERING">B.E - INFORMATION SCIENCE AND ENGINEERING</option>
+                                </select>
+                            </div>
+        
+                            
+        
+        
+                        </div>
+                        <div class="mybutton-container">
+                            <a href=""><button class="btn" id="prev">Prev</button></a>
+                            <a href=""><button class="btn" id="next">Next</button></a>     
+                        </div>
+                        
+                    </form>
+                </div>
+        
+                </form>
+            </div>
+
+
+        </main>
+        
+        <!--===== MAIN JS =====-->
+        <script src="js/main.js"></script>
+        <script type="text/javascript" src="js/form.js" ></script>
+    </body>
+</html>
+

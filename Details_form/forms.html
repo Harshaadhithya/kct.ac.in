@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ===== BOX ICONS ===== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- ===== CSS ===== -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <title>Document</title>
+  </head>
+  <body id="body-pd">
+    <header class="header" id="header">
+      <div class="header__toggle">
+        <i class="bx bx-menu myopenclose" id="header-toggle"></i>
+      </div>
+      <div class="header__img">
+        <img class="kct-logo" src="images/logo.png" />
+        <div class="user-nav">
+            <img  class="user-image" src="images/user.png" alt="" >
+            <h6 class="username-nav">Username</h6>
+        </div>
+    </div>
+    </header>
+
+    <div class="l-navbar" id="nav-bar">
+      <nav class="nav">
+        <div>
+          <div class="mylogocloseflex">
+            <a href="#" class="nav__logo">
+              <img src="images/kct-logo.png" alt="" />
+              <span class="nav__logo-name">KCT-Admission</span>
+            </a>
+            <div class="myclosebtn">
+              <i class="bx bx-menu bx-x" id="header-close-toggle"></i>
+            </div>
+          </div>
+
+          <div class="nav__list">
+            <a href="" class="nav__link active-link">
+              <i class='bx bx-message-square-edit'></i>
+
+              <span class="nav__name">UG Application Form</span>
+            </a>
+            <a href="#" class="nav__link">
+              <i class="bx bx-stopwatch nav__icon"></i>
+              <span class="nav__name">Campaigns</span>
+            </a>
+            <a href="#" class="nav__link">
+              <i class="bx bx-message-square-detail nav__icon"></i>
+              <span class="nav__name">Notification</span>
+            </a>
+            <a href="#" class="nav__link">
+              <i class="bx bx-list-ul nav__icon"></i>
+              <span class="nav__name">Lists</span>
+            </a>
+            <a href="#" class="nav__link">
+              <i class="bx bx-bar-chart-alt-2 nav__icon"></i>
+              <span class="nav__name">Analytics</span>
+            </a>
+            <a href="#" class="nav__link">
+              <i class="bx bx-mail-send nav__icon"></i>
+              <span class="nav__name">Support</span>
+            </a>
+          </div>
+        </div>
+        <a href="#" class="nav__link">
+          <i class="bx bx-log-out nav__icon"></i>
+          <span class="nav__name">Log Out</span>
+        </a>
+      </nav>
+    </div>
+    <main style="margin-top: 7rem">
+      <!--Block contents here-->
+      <div class="mycontainer">
+        <div class="accordion">
+            <h3 class="forms-title">UG Application Form</h3>
+        <form method="POST" id="theForm">
+            <div class="contentbox" id="0">
+                <div class="form-header accordion-header">
+                  <h1 class="form-heading">Personal Details</h1>
+                </div>
+                <div class="content">
+                    <div class="myform">
+                        <div class="progress-container">
+                            <div class="progress" id="progress"></div>
+                            <div class="circles active">1</div>
+                            <div class="circles">2</div>
+                            <div class="circles">3</div>
+                            <div class="circles">4</div>
+                            <div class="circles">5</div>
+                            <div class="circles">6</div>
+                            <div class="circles">7</div>
+                            <div class="circles">8</div>
+                            <div class="circles">9</div>
+                            <div class="circles">10</div>
+                          </div>
+                          
+                        
+                            <div class="form-container">
+                                <div class="input-field">
+                                    <label  class="labels required" for="name">Name of the Student <span class="input-helper">(Enter your name first and initial last)</span></label>
+                                    <input type="text" id="name" name="name" onchange="InputHandler(event)" required >
+                                </div>
+                                <div class="input-field">
+                                    <label class="labels required" for="dob">Date Of Birth<span></span></label>
+                                    <input type="date" id="date" min="1998-01-01" max="2022-12-12" name="date" onchange="InputHandler(event)" required>
+                                </div>
+                                
+                                
+                                <div class="input-field">
+                                    <label class="labels required" for="gender">Gender<span></span></label>
+                                    <select name="gender" id="gender" onchange="InputHandler(event)" required>
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="nationality">Nationality<span></span></label>
+                                    <select name="nationality" id="nationality" onchange="InputHandler(event)" required >
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="Afganisthan">Afganisthan</option>
+                                        <option value="Belgium">Belgium</option>
+                                        <option value="canada">Canada</option>
+                                        <option value="india">India</option>
+                                    </select>
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="community" >Community<span></span></label>
+                                    <select name="community" id="community" required onchange="InputHandler(event)">
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="OC">OC</option>
+                                        <option value="BC">BC</option>
+                                        <option value="MBC">MBC</option>
+                                        <option value="BCM">BCM</option>
+                                        <option value="SC">SC</option>
+                                        <option value="ST">ST</option>
+                                        <option value="SCA">SCA</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="religion">Religion<span></span></label>
+                                    <select name="religion" id="religion" required onchange="InputHandler(event)">
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="Hindu">Hindu</option>
+                                        <option value="Muslim">Muslim</option>
+                                        <option value="Christian">Christian</option>
+                                        <option value="Sikh">Sikh</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="caste">Caste<span></span></label>
+                                    <select name="caste" id="caste"  required onchange="InputHandler(event)">
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="Caste-1">Caste-1</option>
+                                        <option value="Caste-2">Caste-2</option>
+                                        <option value="Caste-3">Caste-3</option>
+                                        <option value="Caste-4">Caste-4</option>
+                                        <option value="Caste-5">Caste-5</option>
+                                    </select>
+                                </div>
+                                
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="contact" required>Mobile No<span></span></label>
+                                    <input type="tel" id="contact" name="contact" onchange="InputHandler(event)">
+                                </div>
+                                <div class="input-field">
+                                    <label class="labels required" for="email">Email<span></span></label>
+                                    <input type="email" id="email" name="email" required onchange="InputHandler(event)">
+                                </div>
+                                <div class="input-field">
+                                    <label class="labels required" for="aadhar">Aadhar No<span></span></label>
+                                    <input type="text" id="aadhar" name="aadhar" required onchange="InputHandler(event)">
+                                </div>
+                                
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="blood">Blood Group<span></span></label>
+                                    <select name="blood" required id="blood" onchange="InputHandler(event)">
+                                        <option value="" selected disabled >---Select---</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="A+">A+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="O+">O+</option>
+                                        <option value="B+">B+</option>
+                                    </select>
+                                </div>
+            
+            
+                            </div>
+                            <div class="mybutton-container">
+                                <div class="left-button">
+                                    <button class="btn" id="prev" disabled>Prev</button>
+                                    <button class="btn" id="next" onclick="PrevNextHandler(event)">Next</button>
+                                </div>  
+                            </div>
+                            
+                        
+                    </div>
+                </div>
+              </div>
+    
+              
+    
+              <div class="contentbox" id="1">
+                <div class="form-header accordion-header">
+                  <h1 class="form-heading">Course Preference</h1>
+                </div>
+                <div class="content">
+                    <div class="myform">
+                        <div class="progress-container">
+                            <div class="progress" id="progress"></div>
+                            <div class="circles">1</div>
+                            <div class="circles active">2</div>
+                            <div class="circles">3</div>
+                            <div class="circles">4</div>
+                            <div class="circles">5</div>
+                            <div class="circles">6</div>
+                            <div class="circles">7</div>
+                            <div class="circles">8</div>
+                            <div class="circles">9</div>
+                            <div class="circles">10</div>
+                          </div>
+                          
+                        
+                            <div class="form-container">
+                                
+                                
+                                <div class="input-field">
+                                    <label class="labels required" for="quota">Quota<span></span></label>
+                                    <select name="quota" id="quota" onchange="InputHandler(event)" required>
+                                        <option value="" selected disabled hidden>---Select---</option>
+                                        <option value="Government Quota Academics">Government Quota Academics</option>
+                                        <option value="Government Quota Vocational">Government Quota Vocational</option>
+                                        <option value="Government Quota Vocational">Management Quota</option>
+                                        <option value="Government Quota Vocational">NRI</option>
+                                    </select>
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="first_preference">First Preference<span></span></label>
+                                    <select name="first_preference" id="first_preference" onchange="InputHandler(event)" required >
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="B.E - AERONAUTICAL ENGINEERING">B.E - AERONAUTICAL ENGINEERING</option>
+                                        <option value="B.E - AUTOMOBILE ENGINEERING">B.E - AUTOMOBILE ENGINEERING</option>
+                                        <option value="B.Tech - BIO-TECHNOLOGY">B.Tech - BIO-TECHNOLOGY</option>
+                                        <option value="B.E - CIVIL ENGINEERING">B.E - CIVIL ENGINEERING</option>
+                                        <option value="B.E - COMPUTER SCIENCE AND ENGINEERING">B.E - COMPUTER SCIENCE AND ENGINEERING</option>
+                                        <option value="B.E - ELECTRONICS AND COMMUNICATION ENGINEERING">B.E - ELECTRONICS AND COMMUNICATION ENGINEERING</option>
+                                        <option value="B.E - ELECTRICAL AND ELECTRONICS ENGINEERING">B.E - ELECTRICAL AND ELECTRONICS ENGINEERING</option>
+                                        <option value="B.E - ELECTRONICS AND INSTRUMENTATION ENGINEERING">B.E - ELECTRONICS AND INSTRUMENTATION ENGINEERING</option>
+                                        <option value="B.Tech - FASHION TECHNOLOGY">B.Tech - FASHION TECHNOLOGY</option>
+                                        <option value="B.Tech - INFORMATION TECHNOLOGY">B.Tech - INFORMATION TECHNOLOGY</option>
+                                        <option value="B.E - MECHATRONICS ENGINEERING">B.E - MECHATRONICS ENGINEERING</option>
+                                        <option value="B.E - MECHANICAL ENGINEERING">B.E - MECHANICAL ENGINEERING</option>
+                                        <option value="B.Tech - TEXTILE TECHNOLOGY">B.Tech - TEXTILE TECHNOLOGY</option>
+                                        <option value="B.Tech - ARTIFICIAL INTELLIGENCE AND DATA SCIENCE">B.Tech - ARTIFICIAL INTELLIGENCE AND DATA SCIENCE</option>
+                                        <option value="B.E - INFORMATION SCIENCE AND ENGINEERING">B.E - INFORMATION SCIENCE AND ENGINEERING</option>
+                                    </select>
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="second_preference" >Second Preference<span></span></label>
+                                    <select name="second_preference" id="second_preference" required onchange="InputHandler(event)">
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="B.E - AERONAUTICAL ENGINEERING">B.E - AERONAUTICAL ENGINEERING</option>
+                                        <option value="B.E - AUTOMOBILE ENGINEERING">B.E - AUTOMOBILE ENGINEERING</option>
+                                        <option value="B.Tech - BIO-TECHNOLOGY">B.Tech - BIO-TECHNOLOGY</option>
+                                        <option value="B.E - CIVIL ENGINEERING">B.E - CIVIL ENGINEERING</option>
+                                        <option value="B.E - COMPUTER SCIENCE AND ENGINEERING">B.E - COMPUTER SCIENCE AND ENGINEERING</option>
+                                        <option value="B.E - ELECTRONICS AND COMMUNICATION ENGINEERING">B.E - ELECTRONICS AND COMMUNICATION ENGINEERING</option>
+                                        <option value="B.E - ELECTRICAL AND ELECTRONICS ENGINEERING">B.E - ELECTRICAL AND ELECTRONICS ENGINEERING</option>
+                                        <option value="B.E - ELECTRONICS AND INSTRUMENTATION ENGINEERING">B.E - ELECTRONICS AND INSTRUMENTATION ENGINEERING</option>
+                                        <option value="B.Tech - FASHION TECHNOLOGY">B.Tech - FASHION TECHNOLOGY</option>
+                                        <option value="B.Tech - INFORMATION TECHNOLOGY">B.Tech - INFORMATION TECHNOLOGY</option>
+                                        <option value="B.E - MECHATRONICS ENGINEERING">B.E - MECHATRONICS ENGINEERING</option>
+                                        <option value="B.E - MECHANICAL ENGINEERING">B.E - MECHANICAL ENGINEERING</option>
+                                        <option value="B.Tech - TEXTILE TECHNOLOGY">B.Tech - TEXTILE TECHNOLOGY</option>
+                                        <option value="B.Tech - ARTIFICIAL INTELLIGENCE AND DATA SCIENCE">B.Tech - ARTIFICIAL INTELLIGENCE AND DATA SCIENCE</option>
+                                        <option value="B.E - INFORMATION SCIENCE AND ENGINEERING">B.E - INFORMATION SCIENCE AND ENGINEERING</option>
+                                    </select>
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="third_preference">Third Preference<span></span></label>
+                                    <select name="third_preference" id="third_preference" required onchange="InputHandler(event)">
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="B.E - AERONAUTICAL ENGINEERING">B.E - AERONAUTICAL ENGINEERING</option>
+                                        <option value="B.E - AUTOMOBILE ENGINEERING">B.E - AUTOMOBILE ENGINEERING</option>
+                                        <option value="B.Tech - BIO-TECHNOLOGY">B.Tech - BIO-TECHNOLOGY</option>
+                                        <option value="B.E - CIVIL ENGINEERING">B.E - CIVIL ENGINEERING</option>
+                                        <option value="B.E - COMPUTER SCIENCE AND ENGINEERING">B.E - COMPUTER SCIENCE AND ENGINEERING</option>
+                                        <option value="B.E - ELECTRONICS AND COMMUNICATION ENGINEERING">B.E - ELECTRONICS AND COMMUNICATION ENGINEERING</option>
+                                        <option value="B.E - ELECTRICAL AND ELECTRONICS ENGINEERING">B.E - ELECTRICAL AND ELECTRONICS ENGINEERING</option>
+                                        <option value="B.E - ELECTRONICS AND INSTRUMENTATION ENGINEERING">B.E - ELECTRONICS AND INSTRUMENTATION ENGINEERING</option>
+                                        <option value="B.Tech - FASHION TECHNOLOGY">B.Tech - FASHION TECHNOLOGY</option>
+                                        <option value="B.Tech - INFORMATION TECHNOLOGY">B.Tech - INFORMATION TECHNOLOGY</option>
+                                        <option value="B.E - MECHATRONICS ENGINEERING">B.E - MECHATRONICS ENGINEERING</option>
+                                        <option value="B.E - MECHANICAL ENGINEERING">B.E - MECHANICAL ENGINEERING</option>
+                                        <option value="B.Tech - TEXTILE TECHNOLOGY">B.Tech - TEXTILE TECHNOLOGY</option>
+                                        <option value="B.Tech - ARTIFICIAL INTELLIGENCE AND DATA SCIENCE">B.Tech - ARTIFICIAL INTELLIGENCE AND DATA SCIENCE</option>
+                                        <option value="B.E - INFORMATION SCIENCE AND ENGINEERING">B.E - INFORMATION SCIENCE AND ENGINEERING</option>
+                                    </select>
+                                </div>
+            
+                                
+            
+            
+                            </div>
+                            <div class="mybutton-container">
+                                <div class="left-button">
+                                    <button class="btn" id="prev" onclick="PrevNextHandler(event)">Prev</button>
+                                    <button class="btn" id="next" onclick="PrevNextHandler(event)">Next</button>  
+                                </div>      
+                            </div>
+                            
+                        
+                    </div>
+                </div>
+    
+              </div>
+
+
+              
+              <div class="contentbox" id="2">
+                <div class="form-header accordion-header">
+                  <h1 class="form-heading">Educational Details</h1>
+                </div>
+                <div class="content">
+                    <div class="myform">
+                        <div class="progress-container">
+                            <div class="progress" id="progress"></div>
+                            <div class="circles">1</div>
+                            <div class="circles">2</div>
+                            <div class="circles active">3</div>
+                            <div class="circles">4</div>
+                            <div class="circles ">5</div>
+                            <div class="circles ">6</div>
+                            <div class="circles">7</div>
+                            <div class="circles">8</div>
+                            <div class="circles">9</div>
+                            <div class="circles">10</div>
+                        </div>
+                         
+                        
+                            <!--Father Section-->
+                            <div class="form_sub_heading">
+                                <h3>SSLC Details</h3>
+                            </div>
+                            <div class="form-container">
+                                
+                                <div class="input-field">
+                                    <label  class="labels required" for="sslc_register_no">Register No<span></span></label>
+                                    <input type="text" id="sslc_register_no" name="sslc_register_no" onchange="InputHandler(event)" required >
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="sslc_passing_year">Month and Year of Passing<span></span></label>
+                                    <input type="month" id="sslc_passing_year" name="sslc_passing_year" min="2017-01" max="2022-12" onchange="InputHandler(event)" required >
+                                </div>
+        
+                                <div class="input-field">
+                                    <label class="labels required" for="sslc_board">Board<span></span></label>
+                                    <select name="sslc_board" id="sslc_board" onchange="InputHandler(event)" required >
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="State Board">State Board</option>
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="ICSE">ICSE</option>
+                                        <option value="ISC">ISC</option>
+                                        <option value="IB">IB</option>
+                                        <option value="IGCSE">IGCSE</option>
+                                        <option value="others">Others</option>
+                                    </select>
+                                </div>
+        
+                                <div class="input-field">
+                                    <label class="labels required" for="sslc_medium">Medium<span></span></label>
+                                    <select name="sslc_medium" id="sslc_medium" onchange="InputHandler(event)" required >
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="English">English</option>
+                                        <option value="Tamil">Tamil</option>
+                                        <option value="Telugu">Telugu</option>
+                                        <option value="Malayalam">Malayalam</option>
+                                        <option value="Kannada">Kannada</option>
+                                        <option value="Urdu">Urdu</option>
+                                        <option value="Hindi">Hindi</option>
+                                        <option value="Sanskrit">Sanskrit</option>
+                                        <option value="Arabic">Arabic</option>
+                                        <option value="French and German">French and German</option>
+                                        <option value="others">Others</option>
+                                    </select>
+                                </div>
+        
+                                <div class="input-field">
+                                    <label class="labels required" for="sslc_school_name">Name of the School<span></span></label>
+                                    <input type="text" id="sslc_school_name" name="sslc_school_name" onchange="InputHandler(event)" required >
+                                </div>
+        
+                                <div class="input-field">
+                                    <label class="labels required" for="sslc_school_place">Place of the School<span></span></label>
+                                    <input type="text" id="sslc_school_place" name="sslc_school_place" onchange="InputHandler(event)" required >
+                                </div>
+        
+                                <div class="input-field input-field-radio">
+                                    <label class="labels required" for="sslc_school_type">Type of School<span></span></label>
+                                    <div class="radio-flex">
+                                        <div class="radio-inner">
+                                            <input type="radio" id="radio_sslc_private" name="sslc_school_type" value="Private" required>
+                                            <label for="radio_sslc_private">Private</label><br>
+                                        </div>
+                                        <div class="radio-inner">
+                                            <input type="radio" id="radio_sslc_government" name="sslc_school_type" value="Government">
+                                            <label for="radio_sslc_government">Government</label><br>
+                                        </div>  
+                                        <div class="radio-inner">
+                                            <input type="radio" id="radio_sslc_other" name="sslc_school_type" value="Other">
+                                            <label for="radio_sslc_other">Other</label><br>
+                                        </div>                          
+                                    </div>   
+                                </div>
+        
+                                <div class="input-field">
+                                    <label class="labels required" for="sslc_qualified_state">Qualified State<span></span></label>
+                                    <select name="sslc_qualified_state" id="sslc_qualified_state" onchange="InputHandler(event)" required >
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Kerala">Kerala</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="input-field">
+                                    <label class="labels required" for="sslc_qualified_city">Qualified City<span></span></label>
+                                    <select name="sslc_qualified_city" id="sslc_qualified_city" onchange="InputHandler(event)" required >
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="Chennai">Chennai</option>
+                                        <option value="Coimbatore">Coimbatore</option>
+                                        <option value="Madurai">Madurai</option>
+                                        <option value="Trichy">Trichy</option>
+                                    </select>
+                                </div> 
+                            </div>
+            
+                            <br>
+                            <div class="form_sub_title">
+                                <h5>SSLC Marks</h5>
+                            </div>
+                            <div class="form-container">
+                                <div class="input-field markfield">
+                                    <div class="markfield-border">
+                                        <label class="labels subject-label">Language<span></span></label>
+                                        <div class="scored_maximum">
+                                            <div class="label_input_combined">
+                                                <label  class="labels required" for="sslc_language_scored">Scored<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="sslc_language_scored" name="sslc_language_scored" onchange="InputHandler(event)" required >
+                                            </div>
+                                            <div class="label_input_combined">
+                                                <label  class="labels required" for="sslc_language_maximum">Maximum<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="sslc_language_maximum" name="sslc_language_maximum" onchange="InputHandler(event)" required >  
+                                            </div>
+                                        </div> 
+                                    </div>                                 
+                                </div>
+                                <div class="input-field markfield">
+                                    <div class="markfield-border">
+                                        <label class="labels subject-label">English<span></span></label>
+                                        <div class="scored_maximum">
+                                            <div class="label_input_combined">
+                                                <label  class="labels required" for="sslc_english_scored">Scored<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="sslc_english_scored" name="sslc_english_scored" onchange="InputHandler(event)" required >
+                                            </div>
+                                            <div class="label_input_combined">
+                                                <label  class="labels required" for="sslc_english_maximum">Maximum<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="sslc_english_maximum" name="sslc_english_maximum" onchange="InputHandler(event)" required >  
+                                            </div>
+                                        </div> 
+                                    </div>
+                                                                   
+                                </div>
+                                <div class="input-field markfield">
+                                    <div class="markfield-border">
+                                        <label class="labels subject-label">Mathematics<span></span></label>
+                                        <div class="scored_maximum">
+                                            <div class="label_input_combined">
+                                                <label  class="labels required" for="sslc_mathematics_scored">Scored<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="sslc_mathematics_scored" name="sslc_mathematics_scored" onchange="InputHandler(event)" required >
+                                            </div>
+                                            <div class="label_input_combined">
+                                                <label  class="labels required" for="sslc_mathematics_maximum">Maximum<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="sslc_mathematics_maximum" name="sslc_mathematics_maximum" onchange="InputHandler(event)" required >  
+                                            </div>
+                                        </div>   
+                                    </div>                               
+                                </div>
+        
+                                <div class="input-field markfield">
+                                    <div class="markfield-border">
+                                        <label class="labels subject-label">Science <span></span></label>
+                                        <div class="scored_maximum">
+                                            <div class="label_input_combined">
+                                                <label  class="labels required" for="sslc_science_scored">Scored<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="sslc_science_scored" name="sslc_science_scored" onchange="InputHandler(event)" required >
+                                            </div>
+                                            <div class="label_input_combined">
+                                                <label  class="labels required" for="sslc_science_maximum">Maximum<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="sslc_english_maximum" name="sslc_english_maximum" onchange="InputHandler(event)" required >  
+                                            </div>
+                                        </div> 
+                                    </div>                                   
+                                </div>
+        
+                                <div class="input-field markfield">
+                                    <div class="markfield-border">
+                                        <label class="labels subject-label">Social Science <span></span></label>
+                                        <div class="scored_maximum">
+                                            <div class="label_input_combined">
+                                                <label  class="labels required" for="sslc_social_scored">Scored<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="sslc_social_scored" name="sslc_social_scored" onchange="InputHandler(event)" required >
+                                            </div>
+                                            <div class="label_input_combined">
+                                                <label  class="labels required" for="sslc_social_maximum">Maximum<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="sslc_social_maximum" name="sslc_social_maximum" onchange="InputHandler(event)" required >  
+                                            </div>
+                                        </div> 
+                                    </div>                          
+                                </div>
+        
+                                <div class="input-field markfield">
+                                    <div class="markfield-border">
+                                        <div class="other-subject-field">
+                                            <label  class="labels" for="sslc_other_subject_name">Other Subject <span></span></label>
+                                            <input type="text" id="sslc_other_subject_name" name="sslc_other_subject_name" onchange="InputHandler(event)" required >
+                                        </div>
+                                        <div class="scored_maximum">
+                                            <div class="label_input_combined">
+                                                <label  class="labels " for="sslc_other_subject_scored">Scored<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="sslc_other_subject_scored" name="sslc_other_subject_scored" onchange="InputHandler(event)"  >
+                                            </div>
+                                            <div class="label_input_combined">
+                                                <label  class="labels" for="sslc_other_subject_maximum">Maximum<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="sslc_other_subject_maximum" name="sslc_other_subject_maximum" onchange="InputHandler(event)"  >  
+                                            </div>
+                                        </div> 
+                                    </div>                          
+                                </div>
+        
+                            </div>
+            <hr>
+                            <!--HSC +1 details-->
+                           <div class="form_sub_heading">
+                                <h3>HSC +1 Details</h3>
+                            </div>
+                            <div class="form-container">
+                                
+                                <div class="input-field">
+                                    <label  class="labels" for="hsc_1_register_no">Register No<span></span></label>
+                                    <input type="text" id="hsc_1_register_no" name="hsc_1_register_no" onchange="InputHandler(event)"  >
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels" for="hsc_1_passing_year">Month and Year of Passing<span></span></label>
+                                    <input type="month" id="hsc_1_passing_year" name="hsc_1_passing_year" min="2017-01" max="2022-12" onchange="InputHandler(event)">
+                                </div>
+        
+                                <div class="input-field">
+                                    <label class="labels" for="hsc_1_board">Board<span></span></label>
+                                    <select name="hsc_1_board" id="hsc_1_board" onchange="InputHandler(event)" >
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="State Board">State Board</option>
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="ICSE">ICSE</option>
+                                        <option value="ISC">ISC</option>
+                                        <option value="IB">IB</option>
+                                        <option value="IGCSE">IGCSE</option>
+                                        <option value="others">Others</option>
+                                    </select>
+                                </div>
+        
+                                <div class="input-field">
+                                    <label class="labels" for="hsc_1_medium">Medium<span></span></label>
+                                    <select name="hsc_1_medium" id="hsc_1_medium" onchange="InputHandler(event)" >
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="English">English</option>
+                                        <option value="Tamil">Tamil</option>
+                                        <option value="Telugu">Telugu</option>
+                                        <option value="Malayalam">Malayalam</option>
+                                        <option value="Kannada">Kannada</option>
+                                        <option value="Urdu">Urdu</option>
+                                        <option value="Hindi">Hindi</option>
+                                        <option value="Sanskrit">Sanskrit</option>
+                                        <option value="Arabic">Arabic</option>
+                                        <option value="French and German">French and German</option>
+                                        <option value="others">Others</option>
+                                    </select>
+                                </div>
+        
+                                <div class="input-field">
+                                    <label class="labels" for="hsc_1_school_name">Name of the School<span></span></label>
+                                    <input type="text" id="hsc_1_school_name" name="hsc_1_school_name" onchange="InputHandler(event)">
+                                </div>
+        
+                                <div class="input-field">
+                                    <label class="labels" for="hsc_1_school_place">Place of the School<span></span></label>
+                                    <input type="text" id="hsc_1_school_place" name="hsc_1_school_place" onchange="InputHandler(event)">
+                                </div>
+        
+                                <div class="input-field input-field-radio">
+                                    <label class="labels" for="hsc_1_school_type">Type of School<span></span></label>
+                                    <div class="radio-flex">
+                                        <div class="radio-inner">
+                                            <input type="radio" id="radio_hsc_1_private" name="hsc_1_school_type" value="Private">
+                                            <label for="radio_hsc_1_private">Private</label><br>
+                                        </div>
+                                        <div class="radio-inner">
+                                            <input type="radio" id="radio_hsc_1_government" name="hsc_1_school_type" value="Government">
+                                            <label for="radio_hsc_1_government">Government</label><br>
+                                        </div>  
+                                        <div class="radio-inner">
+                                            <input type="radio" id="radio_hsc_1_other" name="hsc_1_school_type" value="Other">
+                                            <label for="radio_hsc_1_other">Other</label><br>
+                                        </div>                          
+                                    </div>   
+                                </div>
+        
+                                <div class="input-field">
+                                    <label class="labels" for="hsc_1_qualified_state">Qualified State<span></span></label>
+                                    <select name="hsc_1_qualified_state" id="hsc_1_qualified_state" onchange="InputHandler(event)">
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Kerala">Kerala</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="input-field">
+                                    <label class="labels" for="hsc_1_qualified_city">Qualified City<span></span></label>
+                                    <select name="hsc_1_qualified_city" id="hsc_1_qualified_city" onchange="InputHandler(event)">
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="Chennai">Chennai</option>
+                                        <option value="Coimbatore">Coimbatore</option>
+                                        <option value="Madurai">Madurai</option>
+                                        <option value="Trichy">Trichy</option>
+                                    </select>
+                                </div> 
+        
+                                <div class="input-field">
+                                    <label class="labels" for="hsc_1_group_name">Group Name<span></span></label>
+                                    <select name="hsc_1_group_name" id="hsc_1_group_name" onchange="InputHandler(event)">
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="default-group">default-group</option>
+                                        
+                                    </select>
+                                </div>
+        
+                            </div>
+            
+                            <br>
+                            <div class="form_sub_title">
+                                <h5>HSC +1 Marks</h5>
+                            </div>
+                            <div class="form-container">
+                                <div class="input-field markfield">
+                                    <div class="markfield-border">
+                                        <label class="labels subject-label">Language<span></span></label>
+                                        <div class="scored_maximum">
+                                            <div class="label_input_combined">
+                                                <label  class="labels" for="hsc_1_language_scored">Scored<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="hsc_1_language_scored" name="hsc_1_language_scored" onchange="InputHandler(event)" >
+                                            </div>
+                                            <div class="label_input_combined">
+                                                <label  class="labels" for="hsc_1_language_maximum">Maximum<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="hsc_1_language_maximum" name="hsc_1_language_maximum" onchange="InputHandler(event)"  >  
+                                            </div>
+                                        </div> 
+                                    </div>                                 
+                                </div>
+                                
+                                <div class="input-field markfield">
+                                    <div class="markfield-border">
+                                        <label class="labels subject-label">Mathematics<span></span></label>
+                                        <div class="scored_maximum">
+                                            <div class="label_input_combined">
+                                                <label  class="labels" for="hsc_1_mathematics_scored">Scored<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="hsc_1_mathematics_scored" name="hsc_1_mathematics_scored" onchange="InputHandler(event)">
+                                            </div>
+                                            <div class="label_input_combined">
+                                                <label  class="labels" for="hsc_1_mathematics_maximum">Maximum<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="hsc_1_mathematics_maximum" name="hsc_1_mathematics_maximum" onchange="InputHandler(event)" >  
+                                            </div>
+                                        </div>   
+                                    </div>                               
+                                </div>
+        
+                                
+        
+                                <div class="input-field markfield">
+                                    <div class="markfield-border">
+                                        <div class="other-subject-field">
+                                            <label  class="labels" for="hsc_1_other_subject_name">Other Subject <span></span></label>
+                                            <input type="text" id="hsc_1_other_subject_name" name="hsc_1_other_subject_name" onchange="InputHandler(event)" required >
+                                        </div>
+                                        <div class="scored_maximum">
+                                            <div class="label_input_combined">
+                                                <label  class="labels " for="hsc_1_other_subject_scored">Scored<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="hsc_1_other_subject_scored" name="hsc_1_other_subject_scored" onchange="InputHandler(event)"  >
+                                            </div>
+                                            <div class="label_input_combined">
+                                                <label  class="labels" for="hsc_1_other_subject_maximum">Maximum<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="hsc_1_other_subject_maximum" name="hsc_1_other_subject_maximum" onchange="InputHandler(event)"  >  
+                                            </div>
+                                        </div> 
+                                    </div>                          
+                                </div>
+        
+                                <div class="input-field markfield">
+                                    <div class="markfield-border">
+                                        <label class="labels subject-label">Total Marks<span></span></label>
+                                        <div class="scored_maximum">
+                                            <div class="label_input_combined">
+                                                <label  class="labels" for="hsc_1_total_scored">Scored<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="hsc_1_total_scored" name="hsc_1_total_scored" onchange="InputHandler(event)">
+                                            </div>
+                                            <div class="label_input_combined">
+                                                <label  class="labels" for="hsc_1_total_maximum">Maximum<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="hsc_1_total_maximum" name="hsc_1_total_maximum" onchange="InputHandler(event)" >  
+                                            </div>
+                                        </div>   
+                                    </div>                               
+                                </div>
+        
+                            </div>
+        
+                            <!--HSC +2-->
+        
+                            <div class="form_sub_heading">
+                                <h3>HSC +2 Details</h3>
+                            </div>
+                            <div class="form-container">
+                                
+                                <div class="input-field">
+                                    <label  class="labels" for="hsc_2_register_no">Register No<span></span></label>
+                                    <input type="text" id="hsc_2_register_no" name="hsc_2_register_no" onchange="InputHandler(event)"  >
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels" for="hsc_2_passing_year">Month and Year of Passing<span></span></label>
+                                    <input type="month" id="hsc_2_passing_year" name="hsc_2_passing_year" min="2017-01" max="2022-12" onchange="InputHandler(event)">
+                                </div>
+        
+                                <div class="input-field">
+                                    <label class="labels" for="hsc_2_board">Board<span></span></label>
+                                    <select name="hsc_2_board" id="hsc_2_board" onchange="InputHandler(event)" >
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="State Board">State Board</option>
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="ICSE">ICSE</option>
+                                        <option value="ISC">ISC</option>
+                                        <option value="IB">IB</option>
+                                        <option value="IGCSE">IGCSE</option>
+                                        <option value="others">Others</option>
+                                    </select>
+                                </div>
+        
+                                <div class="input-field">
+                                    <label class="labels" for="hsc_2_medium">Medium<span></span></label>
+                                    <select name="hsc_2_medium" id="hsc_2_medium" onchange="InputHandler(event)" >
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="English">English</option>
+                                        <option value="Tamil">Tamil</option>
+                                        <option value="Telugu">Telugu</option>
+                                        <option value="Malayalam">Malayalam</option>
+                                        <option value="Kannada">Kannada</option>
+                                        <option value="Urdu">Urdu</option>
+                                        <option value="Hindi">Hindi</option>
+                                        <option value="Sanskrit">Sanskrit</option>
+                                        <option value="Arabic">Arabic</option>
+                                        <option value="French and German">French and German</option>
+                                        <option value="others">Others</option>
+                                    </select>
+                                </div>
+        
+                                <div class="input-field">
+                                    <label class="labels" for="hsc_2_school_name">Name of the School<span></span></label>
+                                    <input type="text" id="hsc_2_school_name" name="hsc_2_school_name" onchange="InputHandler(event)">
+                                </div>
+        
+                                <div class="input-field">
+                                    <label class="labels" for="hsc_2_school_place">Place of the School<span></span></label>
+                                    <input type="text" id="hsc_2_school_place" name="hsc_2_school_place" onchange="InputHandler(event)">
+                                </div>
+        
+                                <div class="input-field input-field-radio">
+                                    <label class="labels" for="hsc_2_school_type">Type of School<span></span></label>
+                                    <div class="radio-flex">
+                                        <div class="radio-inner">
+                                            <input type="radio" id="radio_hsc_2_private" name="hsc_2_school_type" value="Private">
+                                            <label for="radio_hsc_2_private">Private</label><br>
+                                        </div>
+                                        <div class="radio-inner">
+                                            <input type="radio" id="radio_hsc_2_government" name="hsc_2_school_type" value="Government">
+                                            <label for="radio_hsc_2_government">Government</label><br>
+                                        </div>  
+                                        <div class="radio-inner">
+                                            <input type="radio" id="radio_hsc_2_other" name="hsc_2_school_type" value="Other">
+                                            <label for="radio_hsc_2_other">Other</label><br>
+                                        </div>                          
+                                    </div>   
+                                </div>
+        
+                                <div class="input-field">
+                                    <label class="labels" for="hsc_2_qualified_state">Qualified State<span></span></label>
+                                    <select name="hsc_2_qualified_state" id="hsc_2_qualified_state" onchange="InputHandler(event)">
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Kerala">Kerala</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="input-field">
+                                    <label class="labels" for="hsc_2_qualified_city">Qualified City<span></span></label>
+                                    <select name="hsc_2_qualified_city" id="hsc_2_qualified_city" onchange="InputHandler(event)">
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="Chennai">Chennai</option>
+                                        <option value="Coimbatore">Coimbatore</option>
+                                        <option value="Madurai">Madurai</option>
+                                        <option value="Trichy">Trichy</option>
+                                    </select>
+                                </div> 
+        
+                                <div class="input-field">
+                                    <label class="labels" for="hsc_2_group_name">Group Name<span></span></label>
+                                    <select name="hsc_2_group_name" id="hsc_2_group_name" onchange="InputHandler(event)">
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="default-group">default-group</option>
+                                        
+                                    </select>
+                                </div>
+        
+                                <div class="input-field input-field-radio">
+                                    <label class="labels" for="hsc_2_area_type">Type of Area<span></span></label>
+                                    <div class="radio-flex">
+                                        <div class="radio-inner">
+                                            <input type="radio" id="radio_hsc_2_Rural" name="hsc_2_area_type" value="Rural">
+                                            <label for="radio_hsc_2_Rural">Rural</label><br>
+                                        </div>
+                                        <div class="radio-inner">
+                                            <input type="radio" id="radio_hsc_2_urban" name="hsc_2_area_type" value="Urban">
+                                            <label for="radio_hsc_2_urban">Urban</label><br>
+                                        </div>  
+                                        <div class="radio-inner">
+                                            <input type="radio" id="radio_hsc_2_other_area" name="hsc_2_area_type" value="Other">
+                                            <label for="radio_hsc_2_other_area">Other</label><br>
+                                        </div>                          
+                                    </div>   
+                                </div>
+        
+                            </div>
+            
+                            <br>
+                            <div class="form_sub_title">
+                                <h5>HSC +2 Marks</h5>
+                            </div>
+                            <div class="form-container">
+                                <div class="input-field markfield">
+                                    <div class="markfield-border">
+                                        <label class="labels subject-label">Language<span></span></label>
+                                        <div class="scored_maximum">
+                                            <div class="label_input_combined">
+                                                <label  class="labels" for="hsc_2_language_scored">Scored<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="hsc_2_language_scored" name="hsc_2_language_scored" onchange="InputHandler(event)" >
+                                            </div>
+                                            <div class="label_input_combined">
+                                                <label  class="labels" for="hsc_2_language_maximum">Maximum<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="hsc_2_language_maximum" name="hsc_2_language_maximum" onchange="InputHandler(event)"  >  
+                                            </div>
+                                        </div> 
+                                    </div>                                 
+                                </div>
+                                
+                                <div class="input-field markfield">
+                                    <div class="markfield-border">
+                                        <label class="labels subject-label">Mathematics<span></span></label>
+                                        <div class="scored_maximum">
+                                            <div class="label_input_combined">
+                                                <label  class="labels" for="hsc_2_mathematics_scored">Scored<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="hsc_2_mathematics_scored" name="hsc_2_mathematics_scored" onchange="InputHandler(event)">
+                                            </div>
+                                            <div class="label_input_combined">
+                                                <label  class="labels" for="hsc_2_mathematics_maximum">Maximum<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="hsc_2_mathematics_maximum" name="hsc_2_mathematics_maximum" onchange="InputHandler(event)" >  
+                                            </div>
+                                        </div>   
+                                    </div>                               
+                                </div>
+        
+                                
+        
+                                <div class="input-field markfield">
+                                    <div class="markfield-border">
+                                        <div class="other-subject-field">
+                                            <label  class="labels" for="hsc_2_other_subject_name">Other Subject <span></span></label>
+                                            <input type="text" id="hsc_2_other_subject_name" name="hsc_2_other_subject_name" onchange="InputHandler(event)" required >
+                                        </div>
+                                        <div class="scored_maximum">
+                                            <div class="label_input_combined">
+                                                <label  class="labels " for="hsc_2_other_subject_scored">Scored<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="hsc_2_other_subject_scored" name="hsc_2_other_subject_scored" onchange="InputHandler(event)"  >
+                                            </div>
+                                            <div class="label_input_combined">
+                                                <label  class="labels" for="hsc_2_other_subject_maximum">Maximum<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="hsc_2_other_subject_maximum" name="hsc_2_other_subject_maximum" onchange="InputHandler(event)"  >  
+                                            </div>
+                                        </div> 
+                                    </div>                          
+                                </div>
+        
+                                <div class="input-field markfield">
+                                    <div class="markfield-border">
+                                        <label class="labels subject-label">Total Marks<span></span></label>
+                                        <div class="scored_maximum">
+                                            <div class="label_input_combined">
+                                                <label  class="labels" for="hsc_2_total_scored">Scored<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="hsc_2_total_scored" name="hsc_2_total_scored" onchange="InputHandler(event)">
+                                            </div>
+                                            <div class="label_input_combined">
+                                                <label  class="labels" for="hsc_2_total_maximum">Maximum<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="hsc_2_total_maximum" name="hsc_2_total_maximum" onchange="InputHandler(event)" >  
+                                            </div>
+                                        </div>   
+                                    </div>                               
+                                </div>
+        
+                                <div class="input-field markfield">
+                                    <div class="markfield-border">
+                                        <label class="labels subject-label">Cut Of Marks<span></span></label>
+                                        <div class="scored_maximum">
+                                            <div class="label_input_combined">
+                                                <label  class="labels" for="hsc_2_cutoff_scored">Scored<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="hsc_2_cutoff_scored" name="hsc_2_cutoff_scored" onchange="InputHandler(event)">
+                                            </div>
+                                            <div class="label_input_combined">
+                                                <label  class="labels" for="hsc_2_cutoff_maximum">Maximum<span></span></label>
+                                                <input class="markinputfield" type='number' min="0" id="hsc_2_cutoff_maximum" name="hsc_2_cutoff_maximum" onchange="InputHandler(event)" >  
+                                            </div>
+                                        </div>   
+                                    </div>                               
+                                </div>
+        
+                            </div>
+                            
+            
+            <!--Next Prev Button Section-->
+                           
+            
+                            <div class="mybutton-container">
+                                <div class="left-button">
+                                    <button class="btn" id="prev" onclick="PrevNextHandler(event)">Prev</button>
+                                    <button class="btn" id="next" onclick="PrevNextHandler(event)">Next</button>
+                                </div>
+                        
+                            </div>    
+                    </div>
+                </div>
+              </div>
+    
+<!--Parent guardian-->
+
+              <div class="contentbox" id="3">
+                <div class="form-header accordion-header">
+                  <h1 class="form-heading">Parent/Guardian Details</h1>
+                </div>
+                <div class="content">
+                    <div class="myform">
+                        <div class="progress-container">
+                            <div class="progress" id="progress"></div>
+                            <div class="circles">1</div>
+                            <div class="circles">2</div>
+                            <div class="circles">3</div>
+                            <div class="circles">4</div>
+                            <div class="circles active">5</div>
+                            <div class="circles">6</div>
+                            <div class="circles">7</div>
+                            <div class="circles">8</div>
+                            <div class="circles">9</div>
+                            <div class="circles">10</div>
+                        </div>
+                         
+                        
+                            <!--Father Section-->
+                            <div class="form_sub_heading">
+                                <h3>Father Details</h3>
+                            </div>
+                            <div class="form-container">
+                                
+                                <div class="input-field">
+                                    <label  class="labels required" for="father_name">Father Name<span></span></label>
+                                    <input type="text" id="father_name" name="father_name" onchange="InputHandler(event)" required >
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="father_qualification">Qualification<span></span></label>
+                                    <select name="father_qualification" id="father_qualification" onchange="InputHandler(event)" required>
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="B.A">B.A</option>
+                                        <option value="B.Sc">B.Sc</option>
+                                        <option value="B.Com">B.Com</option>
+                                        <option value="M.Com">M.Com</option>
+                                        <option value="BCA">BCA</option>
+                                        <option value="MCA">MCA</option>
+                                        <option value="M.Sc">M.Sc</option>
+                                        <option value="B.E">B.E</option>
+                                        <option value="B.Tech">B.Tech</option>
+                                        <option value="M.E">M.E</option>
+                                        <option value="M.Tech">M.Tech</option>
+                                        <option value="Phd">Phd</option>
+                                        <option value="M.Phil">M.Phil</option>
+                                        <option value="M.A">M.A</option>
+                                        <option value="MBA">MBA</option>
+                                        <option value="10th">10th</option>
+                                        <option value="12th">12th</option>
+                                        <option value="Diploma">Diploma</option>
+                                        <option value="CA">CA</option>
+                                        <option value="ICWA">ICWA</option>
+                                        <option value="ICFA">ICFA</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="father_occupation">Occupation<span></span></label>
+                                    <select name="father_occupation" id="father_occupation" onchange="InputHandler(event)" required >
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="Private">Private</option>
+                                        <option value="Public Sector">Public Sector</option>
+                                        <option value="State Government">State Government</option>
+                                        <option value="Central Government">Central Government</option>
+                                        <option value="Doctor">Doctor</option>
+                                        <option value="Agriculture">Agriculture</option>
+                                        <option value="Self Employed">Self Employed</option>
+                                        <option value="Home Maker">Home Maker</option>
+                                        <option value="Expired">Expired</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="father_designation">Designation<span></span></label>
+                                    <input type="text" id="father_designation" name="father_designation" required onchange="InputHandler(event)">
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="father_annual_income" >Annual Income<span></span></label>
+                                    <select name="father_annual_income" id="father_annual_income" required onchange="InputHandler(event)">
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="Below 50K">Below 50K</option>
+                                        <option value="50K to 1L">50K to 1L</option>
+                                        <option value="1L to 2L">1L to 2L</option>
+                                        <option value="2L to 2.5L">2L to 2.5L</option>
+                                        <option value="2.5L to 5L">2.5L to 5L</option>
+                                        <option value="5L to 10L">5L to 10L</option>
+                                        <option value="Above 10L">Above 10L</option>
+                                    </select>
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="father_contact" required>Mobile No<span></span></label>
+                                    <input type="tel" id="father_contact" name="father_contact" onchange="InputHandler(event)">
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="father_email">Email<span></span></label>
+                                    <input type="email" id="father_email" name="father_email" required onchange="InputHandler(event)">
+                                </div>
+                            </div>
+            
+                            <hr>
+            
+                            <!--Mother Section-->
+                            <div class="form_sub_heading">
+                                <h3>Mother Details</h3>
+                            </div>
+                            <div class="form-container">
+                                
+                                <div class="input-field">
+                                    <label  class="labels required" for="mother_name">Mother Name<span></span></label>
+                                    <input type="text" id="mother_name" name="mother_name" onchange="InputHandler(event)" required >
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="mother_qualification">Qualification<span></span></label>
+                                    <select name="mother_qualification" id="mother_qualification" onchange="InputHandler(event)" required>
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="B.A">B.A</option>
+                                        <option value="B.Sc">B.Sc</option>
+                                        <option value="B.Com">B.Com</option>
+                                        <option value="M.Com">M.Com</option>
+                                        <option value="BCA">BCA</option>
+                                        <option value="MCA">MCA</option>
+                                        <option value="M.Sc">M.Sc</option>
+                                        <option value="B.E">B.E</option>
+                                        <option value="B.Tech">B.Tech</option>
+                                        <option value="M.E">M.E</option>
+                                        <option value="M.Tech">M.Tech</option>
+                                        <option value="Phd">Phd</option>
+                                        <option value="M.Phil">M.Phil</option>
+                                        <option value="M.A">M.A</option>
+                                        <option value="MBA">MBA</option>
+                                        <option value="10th">10th</option>
+                                        <option value="12th">12th</option>
+                                        <option value="Diploma">Diploma</option>
+                                        <option value="CA">CA</option>
+                                        <option value="ICWA">ICWA</option>
+                                        <option value="ICFA">ICFA</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="mother_occupation">Occupation<span></span></label>
+                                    <select name="mother_occupation" id="mother_occupation" onchange="InputHandler(event)" required >
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="Private">Private</option>
+                                        <option value="Public Sector">Public Sector</option>
+                                        <option value="State Government">State Government</option>
+                                        <option value="Central Government">Central Government</option>
+                                        <option value="Doctor">Doctor</option>
+                                        <option value="Agriculture">Agriculture</option>
+                                        <option value="Self Employed">Self Employed</option>
+                                        <option value="Home Maker">Home Maker</option>
+                                        <option value="Expired">Expired</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="mother_designation">Designation<span></span></label>
+                                    <input type="text" id="mother_designation" name="mother_designation" required onchange="InputHandler(event)">
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="mother_annual_income" >Annual Income<span></span></label>
+                                    <select name="mother_annual_income" id="mother_annual_income" required onchange="InputHandler(event)">
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="Below 50K">Below 50K</option>
+                                        <option value="50K to 1L">50K to 1L</option>
+                                        <option value="1L to 2L">1L to 2L</option>
+                                        <option value="2L to 2.5L">2L to 2.5L</option>
+                                        <option value="2.5L to 5L">2.5L to 5L</option>
+                                        <option value="5L to 10L">5L to 10L</option>
+                                        <option value="Above 10L">Above 10L</option>
+                                    </select>
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="mother_contact" required>Mobile No<span></span></label>
+                                    <input type="tel" id="mother_contact" name="mother_contact" onchange="InputHandler(event)">
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels" for="mother_email">Email<span></span></label>
+                                    <input type="email" id="mother_email" name="mother_email"  onchange="InputHandler(event)">
+                                </div>
+                            </div>
+            
+            <!--Siblings Section-->
+                            <hr>
+                            <div class="form_sub_heading">
+                                <h3>Alumni Details of Siblings and Cousins<span class="helper"> (If Any)</span></h3>
+                            </div>
+            
+                            <div class="form-container">  
+                                <div class="input-field">
+                                    <label  class="labels" for="siblings_cousins_name">Sibling's / Cousin's Name<span></span></label>
+                                    <input type="text" id="siblings_cousins_name" name="siblings_cousins_name" onchange="InputHandler(event)" >
+                                </div>
+            
+                                <div class="input-field">
+                                    <label  class="labels" for="siblings_cousins_rollno">Roll No<span></span></label>
+                                    <input type="text" id="siblings_cousins_rollno" name="siblings_cousins_rollno" onchange="InputHandler(event)" >
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels" for="siblings_cousins_contact">Mobile No<span></span></label>
+                                    <input type="tel" id="siblings_cousins_contact" name="siblings_cousins_contact" onchange="InputHandler(event)">
+                                </div>
+                            </div>
+            
+                            <div class="mybutton-container">
+                                <div class="left-button">
+                                    <button class="btn" id="prev" onclick="PrevNextHandler(event)">Prev</button>
+                                    <button class="btn" id="next" onclick="PrevNextHandler(event)">Next</button>  
+                                </div>      
+                            </div>
+                            
+                        
+                    </div> 
+                </div>
+              </div>
+
+
+              <div class="contentbox" id="4">
+                <div class="form-header accordion-header">
+                  <h1 class="form-heading">Address Details</h1>
+                </div>
+                <div class="content">
+                    <div class="myform">
+                        <div class="progress-container">
+                            <div class="progress" id="progress"></div>
+                            <div class="circles">1</div>
+                            <div class="circles">2</div>
+                            <div class="circles">3</div>
+                            <div class="circles">4</div>
+                            <div class="circles ">5</div>
+                            <div class="circles active">6</div>
+                            <div class="circles">7</div>
+                            <div class="circles">8</div>
+                            <div class="circles">9</div>
+                            <div class="circles">10</div>
+                        </div>
+                         
+                       
+                            <!--Present Communication Details-->
+                            <div class="form_sub_heading">
+                                <h3>Present Communication Details</h3>
+                            </div>
+                            <div class="form-container">
+                                
+                                <div class="input-field">
+                                    <label  class="labels required" for="door-house-name">Door No/House Name<span></span></label>
+                                    <input type="text" id="door-house-name" name="door-house-name" onchange="InputHandler(event)" required >
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="street_name">Street Name<span></span></label>
+                                    <input type="text" id="street_name" name="street_name" onchange="InputHandler(event)" required >
+                                </div>
+    
+                                <div class="input-field">
+                                    <label class="labels required" for="village-town">Village/Town<span></span></label>
+                                    <select name="village_town" id="village_town" onchange="InputHandler(event)" required >
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="Private">Village</option>
+                                        <option value="Public Sector">Town</option>
+                                    </select>
+                                </div>
+    
+                                <div class="input-field">
+                                    <label class="labels required" for="taluk">Taluk<span></span></label>
+                                    <input type="text" id="taluk" name="taluk" onchange="InputHandler(event)" required >
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="country">Country<span></span></label>
+                                    <select name="country" id="country" onchange="InputHandler(event)" required >
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="india">India</option>
+                                        <option value="canada">Canada</option>
+                                        <option value="australia">Australia</option>
+                                        <option value="united Kingdom">United Kingdom</option>
+                                    </select>
+                                </div>
+    
+                                <div class="input-field">
+                                    <label class="labels required" for="state">State<span></span></label>
+                                    <select name="state" id="state" onchange="InputHandler(event)" required >
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="tamilnadu">Tamil Nadu</option>
+                                        <option value="kerala">Kerala</option>
+                                        <option value="karnataka">Karnataka</option>
+                                        <option value="bihar">Bihar</option>
+                                    </select>
+                                </div>
+    
+                                <div class="input-field">
+                                    <label class="labels required" for="city">City<span></span></label>
+                                    <select name="city" id="city" onchange="InputHandler(event)" required >
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="coimbatore">Coimbatore</option>
+                                        <option value="chennai">Chennai</option>
+                                        <option value="madurai">Madurai</option>
+                                        <option value="trichy">Trichy</option>
+                                    </select>
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="pincode">Pincode<span></span></label>
+                                    <input type="text" id="pincode" name="pincode" required onchange="InputHandler(event)">
+                                </div>
+                            </div>
+            
+                            <hr>
+            
+                            <!--Permanent Communication details-->
+                            <div class="form_sub_heading">
+                                <h3>Permanent Communication Details</h3>
+                            </div>
+                            <div class="form-container">
+                                
+                                <div class="input-field">
+                                    <label  class="labels required" for="door-house-name">Door No/House Name<span></span></label>
+                                    <input type="text" id="door-house-name" name="door-house-name" onchange="InputHandler(event)" required >
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="street_name">Street Name<span></span></label>
+                                    <input type="text" id="street_name" name="street_name" onchange="InputHandler(event)" required >
+                                </div>
+    
+                                <div class="input-field">
+                                    <label class="labels required" for="village-town">Village/Town<span></span></label>
+                                    <select name="village_town" id="village_town" onchange="InputHandler(event)" required >
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="Private">Village</option>
+                                        <option value="Public Sector">Town</option>
+                                    </select>
+                                </div>
+    
+                                <div class="input-field">
+                                    <label class="labels required" for="taluk">Taluk<span></span></label>
+                                    <input type="text" id="taluk" name="taluk" onchange="InputHandler(event)" required >
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="country">Country<span></span></label>
+                                    <select name="country" id="country" onchange="InputHandler(event)" required >
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="india">India</option>
+                                        <option value="canada">Canada</option>
+                                        <option value="australia">Australia</option>
+                                        <option value="united Kingdom">United Kingdom</option>
+                                    </select>
+                                </div>
+    
+                                <div class="input-field">
+                                    <label class="labels required" for="state">State<span></span></label>
+                                    <select name="state" id="state" onchange="InputHandler(event)" required >
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="tamilnadu">Tamil Nadu</option>
+                                        <option value="kerala">Kerala</option>
+                                        <option value="karnataka">Karnataka</option>
+                                        <option value="bihar">Bihar</option>
+                                    </select>
+                                </div>
+    
+                                <div class="input-field">
+                                    <label class="labels required" for="city">City<span></span></label>
+                                    <select name="city" id="city" onchange="InputHandler(event)" required >
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="coimbatore">Coimbatore</option>
+                                        <option value="chennai">Chennai</option>
+                                        <option value="madurai">Madurai</option>
+                                        <option value="trichy">Trichy</option>
+                                    </select>
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="pincode">Pincode<span></span></label>
+                                    <input type="text" id="pincode" name="pincode" required onchange="InputHandler(event)">
+                                </div>
+                            </div>
+            
+            <!--Next Prev Button Section-->
+                           
+            
+            <div class="mybutton-container">
+                <div class="left-button">
+                    <button class="btn" id="prev" onclick="PrevNextHandler(event)">Prev</button>
+                    <button class="btn" id="next" onclick="PrevNextHandler(event)">Next</button>  
+                </div>      
+            </div>
+                            
+                        
+                    </div>
+                </div>
+              </div>
+    
+    <!--Educational Details-->
+
+    
+    
+              <div class="contentbox" id="5">
+                <div class="form-header accordion-header">
+                  <h1 class="form-heading">TNEA Allotment Details</h1>
+                </div>
+                <div class="content">
+                    <div class="myform">
+                        <div class="progress-container">
+                            <div class="progress" id="progress"></div>
+                            <div class="circles">1</div>
+                            <div class="circles">2</div>
+                            <div class="circles">3</div>
+                            <div class="circles">4</div>
+                            <div class="circles">5</div>
+                            <div class="circles">6</div>
+                            <div class="circles active">7</div>
+                            <div class="circles">8</div>
+                            <div class="circles">9</div>
+                            <div class="circles">10</div>
+                          </div>
+                          
+                        
+                            <div class="form-container">
+                                <div class="input-field">
+                                    <label  class="labels required" for="tnea_application_no">TNEA Application No <span></span></label>
+                                    <input type="text" id="tnea_application_no" name="tnea_application_no" onchange="InputHandler(event)" required >
+                                </div>
+            
+                                <div class="input-field">
+                                    <label  class="labels required" for="tnea_allotment_no">TNEA Allotment No <span></span></label>
+                                    <input type="text" id="tnea_allotment_no" name="tnea_allotment_no" onchange="InputHandler(event)" required >
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="tnea_community" >Community Alloted in TNEA<span></span></label>
+                                    <select name="tnea_community" id="tnea_community" required onchange="InputHandler(event)">
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="OC">OC</option>
+                                        <option value="BC">BC</option>
+                                        <option value="MBC">MBC</option>
+                                        <option value="BCM">BCM</option>
+                                        <option value="SC">SC</option>
+                                        <option value="ST">ST</option>
+                                        <option value="SCA">SCA</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="overall_rank">Overall Rank<span></span></label>
+                                    <input type="number" id="overall_rank" name="overall_rank" min="1" onchange="InputHandler(event)" required>
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="community_rank">Community Rank<span></span></label>
+                                    <input type="number" id="community_rank" name="community_rank" min="1" onchange="InputHandler(event)" required>
+                                </div>
+                                
+                                
+                                
+                            </div>
+                            <div class="mybutton-container">
+                                <div class="left-button">
+                                    <button class="btn" id="prev" onclick="PrevNextHandler(event)">Prev</button>
+                                    <button class="btn" id="next" onclick="PrevNextHandler(event)">Next</button>  
+                                </div>      
+                            </div>
+                            
+                        
+                    </div>
+                </div>
+              </div>
+    
+              <div class="contentbox" id="6">
+                <div class="form-header accordion-header">
+                  <h1 class="form-heading">Bank Details</h1>
+                </div>
+                <div class="content">
+                    <div class="myform">
+                        <div class="progress-container">
+                            <div class="progress" id="progress"></div>
+                            <div class="circles">1</div>
+                            <div class="circles">2</div>
+                            <div class="circles">3</div>
+                            <div class="circles">4</div>
+                            <div class="circles">5</div>
+                            <div class="circles">6</div>
+                            <div class="circles">7</div>
+                            <div class="circles active">8</div>
+                            <div class="circles">9</div>
+                            <div class="circles">10</div>
+                          </div>
+                          
+                        
+                            <div class="form-container">
+            
+                                <div class="input-field input-field-radio">
+                                    <label class="labels required" for="account_holder">Account Holder<span></span></label>
+                                    <div class="radio-flex">
+                                        <div class="radio-inner">
+                                            <input type="radio" id="radio_student" name="account_holder" value="Student" required>
+                                            <label for="radio_student">Student</label><br>
+                                        </div>
+                                        <div class="radio-inner">
+                                            <input type="radio" id="radio_parent" name="account_holder" value="Parent">
+                                            <label for="radio_parent">Parent</label><br>
+                                        </div>                           
+                                    </div>   
+                                </div>
+            
+                                <div class="input-field">
+                                    <label  class="labels required" for="account_holder_name">Account Holder Name<span></span></label>
+                                    <input type="text" id="account_holder_name" name="account_holder_name" onchange="InputHandler(event)" required >
+                                </div>
+            
+                                <div class="input-field">
+                                    <label  class="labels required" for="bank_name">Bank Name<span></span></label>
+                                    <input type="text" id="bank_name" name="bank_name" onchange="InputHandler(event)" required >
+                                </div>
+                                
+                                <div class="input-field">
+                                    <label  class="labels required" for="branch_name">Branch Name<span></span></label>
+                                    <input type="text" id="branch_name" name="branch_name" onchange="InputHandler(event)" required >
+                                </div>
+                                
+                                <div class="input-field">
+                                    <label  class="labels required" for="account_no">Account No<span></span></label>
+                                    <input type="text" id="account_no" name="account_no" onchange="InputHandler(event)" required >
+                                </div>
+                                
+                                <div class="input-field">
+                                    <label  class="labels required" for="ifsc">IFSC Code<span></span></label>
+                                    <input type="text" id="ifsc" name="ifsc" onchange="InputHandler(event)" required >
+                                </div>
+            
+                                <div class="input-field">
+                                    <label  class="labels" for="micr_no">MICR No<span></span></label>
+                                    <input type="text" id="micr_no" name="micr_no" onchange="InputHandler(event)" >
+                                </div>
+            
+            
+                            </div>
+                            <div class="mybutton-container">
+                                <div class="left-button">
+                                    <button class="btn" id="prev" onclick="PrevNextHandler(event)">Prev</button>
+                                    <button class="btn" id="next" onclick="PrevNextHandler(event)">Next</button>  
+                                </div>      
+                            </div>
+                            
+                        
+                    </div>
+                </div>
+              </div>
+    
+              <div class="contentbox" id="7">
+                <div class="form-header accordion-header">
+                  <h1 class="form-heading">Other</h1>
+                </div>
+                <div class="content">
+                    <div class="myform">
+                        <div class="progress-container">
+                            <div class="progress" id="progress"></div>
+                            <div class="circles">1</div>
+                            <div class="circles">2</div>
+                            <div class="circles">3</div>
+                            <div class="circles">4</div>
+                            <div class="circles">5</div>
+                            <div class="circles">6</div>
+                            <div class="circles">7</div>
+                            <div class="circles">8</div>
+                            <div class="circles active">9</div>
+                            <div class="circles">10</div>
+                          </div>
+                          
+                        
+                            <div class="form-container">
+            
+                                <div class="input-field">
+                                    <label class="labels required" for="aspiration" >Aspiration<span></span></label>
+                                    <select name="aspiration" id="aspiration" required onchange="InputHandler(event)">
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="Higher Studies-Abroad">Higher Studies (Abroad)</option>
+                                        <option value="Higher Studies-Within India">Higher Studies (Within India)</option>
+                                        <option value="MBC">Entrepreneur</option>
+                                        <option value="BCM">UPSC</option>
+                                        <option value="SC">Employment</option>
+                                        <option value="ST">Family Business</option>
+                                        <option value="SCA">Others</option>
+                                    </select>
+                                </div>
+            
+                                <div class="input-field">
+                                    <label class="labels " for="aspiration" >Special Reservation <span class="input-helper" >(if any)</span></label>
+                                    <select name="aspiration" id="aspiration" onchange="InputHandler(event)">
+                                        <option value="" selected disabled>---Select---</option>
+                                        <option value="Higher Studies-Abroad">Higher Studies (Abroad)</option>
+                                        <option value="Higher Studies-Within India">Higher Studies (Within India)</option>
+                                        <option value="MBC">Entrepreneur</option>
+                                        <option value="BCM">UPSC</option>
+                                        <option value="SC">Employment</option>
+                                        <option value="ST">Family Business</option>
+                                        <option value="SCA">Others</option>
+                                    </select>
+                                </div>
+            
+                                <div class="input-field input-field-radio">
+                                    <label class="labels required" for="is_single_parent">Is Single Parent?<span></span></label>
+                                    <div class="radio-flex">
+                                        <div class="radio-inner">
+                                            <input type="radio" id="radio_single_parent-1" name="is_single_parent" value=1 required>
+                                            <label for="radio_single_parent-1">Yes</label><br>
+                                        </div>
+                                        <div class="radio-inner">
+                                            <input type="radio" id="radio_single_parent-0" name="is_single_parent" value=0>
+                                            <label for="radio_single_parent-0">No</label><br>
+                                        </div>                           
+                                    </div>   
+                                </div>
+            
+                                <div class="input-field input-field-radio">
+                                    <label class="labels required" for="is_nri">Are you a Non-Resident Indian(NRI)?<span></span></label>
+                                    <div class="radio-flex">
+                                        <div class="radio-inner">
+                                            <input type="radio" id="radio_nri-1" name="is_nri" value=1 required>
+                                            <label for="radio_nri-1">Yes</label><br>
+                                        </div>
+                                        <div class="radio-inner">
+                                            <input type="radio" id="radio_nri-0" name="is_nri" value=0>
+                                            <label for="radio_nri-0">No</label><br>
+                                        </div>                           
+                                    </div>   
+                                </div>
+            
+                                <div class="input-field input-field-radio">
+                                    <label class="labels required" for="is_hostel">Is Hostel Accommodation Required?<span></span></label>
+                                    <div class="radio-flex">
+                                        <div class="radio-inner">
+                                            <input type="radio" id="radio_hostel-1" name="is_hostel" value=1 required>
+                                            <label for="radio_hostel-1">Yes</label><br>
+                                        </div>
+                                        <div class="radio-inner">
+                                            <input type="radio" id="radio_hostel-0" name="is_hostel" value=0>
+                                            <label for="radio_hostel-0">No</label><br>
+                                        </div>                           
+                                    </div>   
+                                </div>
+                                
+                                <div class="input-field input-field-radio">
+                                    <label class="labels required" for="is_transport">Is Transport Required?<span></span></label>
+                                    <div class="radio-flex">
+                                        <div class="radio-inner">
+                                            <input type="radio" id="radio_transport-1" name="is_transport" value=1 required>
+                                            <label for="radio_transport-1">Yes</label><br>
+                                        </div>
+                                        <div class="radio-inner">
+                                            <input type="radio" id="radio_transport-0" name="is_transport" value=0>
+                                            <label for="radio_transport-0">No</label><br>
+                                        </div>                           
+                                    </div>   
+                                </div>
+                                
+                                <div class="input-field input-field-radio combined-input">
+                                    <div>
+                                        <label class="labels required" for="is_physically_challenged">Is Physically Challenged?<span></span></label>
+                                        <div class="radio-flex">
+                                            <div class="radio-inner">
+                                                <input type="radio" id="radio_physically_challenged-1" name="is_physically_challenged" value=1 required>
+                                                <label for="radio_physically_challenged-1">Yes</label><br>
+                                            </div>
+                                            <div class="radio-inner">
+                                                <input type="radio" id="radio_physically_challenged-0" name="is_physically_challenged" value=0>
+                                                <label for="radio_physically_challenged-0">No</label><br>
+                                            </div>                           
+                                        </div>   
+                                    </div>
+                                    
+                                </div>
+            
+            
+                            </div>
+                            <div class="mybutton-container">
+                                <div class="left-button">
+                                    <button class="btn" id="prev" onclick="PrevNextHandler(event)">Prev</button>
+                                    <button class="btn" id="next" onclick="PrevNextHandler(event)">Next</button>
+                                </div>
+                                
+                            </div>   
+                    </div>
+                </div>
+              </div>
+
+<!--File upload section-->
+              <div class="contentbox" id="8">
+                <div class="form-header accordion-header">
+                  <h1 class="form-heading">Attachments</h1>
+                </div>
+                <div class="content">
+                    <div class="myform">
+                        <div class="progress-container">
+                            <div class="progress" id="progress"></div>
+                            <div class="circles">1</div>
+                            <div class="circles">2</div>
+                            <div class="circles">3</div>
+                            <div class="circles">4</div>
+                            <div class="circles">5</div>
+                            <div class="circles">6</div>
+                            <div class="circles">7</div>
+                            <div class="circles">8</div>
+                            <div class="circles">9</div>
+                            <div class="circles active">10</div>
+                          </div>
+                          
+                        
+                            <div class="form-container file-form">
+                                <div class="input-field file-input">
+                                    <label  class="labels file-input-label required" for="photo">Photo<span class="input-helper">( Size: 2MB, Type: jpg, png, gif  )</span></label>
+                                    <div class="file-input-with-clear">
+                                        <input class="file-input-box" type="file" id="photo" name="photo"  accept="image/jpeg,image/png"   required >   
+                                        <button  class="btn clear-btn" style="font-size: 10px; padding:4px 10px" disabled>Clear</button>
+                                    </div>
+                                    
+                                </div>
+                                
+                               
+                                <div class="input-field file-input">
+                                    <label  class="labels file-input-label required" for="x_marksheet">X Mark Sheet<span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                    <div class="file-input-with-clear">
+                                        <input class="file-input-box" type="file" id="x_marksheet" name="x_marksheet"  accept="application/pdf,application/msword"  required >   
+                                        <button  class="btn clear-btn" style="font-size: 10px; padding:4px 10px" disabled>Clear</button>
+                                    </div>
+                                </div>
+    
+                                <div class="input-field file-input">
+                                    <label  class="labels file-input-label " for="xi_marksheet">XI Mark Sheet<span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                    <div class="file-input-with-clear">
+                                        <input class="file-input-box" type="file" id="xi_marksheet" name="xi_marksheet" accept="application/pdf,application/msword" >  
+                                        <button  class="btn clear-btn" style="font-size: 10px; padding:4px 10px" disabled>Clear</button>
+                                    </div> 
+                                </div>
+    
+                                <div class="input-field file-input">
+                                    <label  class="labels file-input-label " for="xii_marksheet">XII Mark Sheet<span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                    <div class="file-input-with-clear">
+                                        <input class="file-input-box" type="file" id="xii_marksheet" name="xii_marksheet"  accept="application/pdf,application/msword"  >  
+                                        <button  class="btn clear-btn" style="font-size: 10px; padding:4px 10px" disabled>Clear</button>
+                                    </div>  
+                                </div>
+                                
+                                <div class="input-field file-input">
+                                    <label  class="labels file-input-label " for="migration_certificate">Migration Certificate, If applicable<span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                    <div class="file-input-with-clear">
+                                        <input class="file-input-box" type="file" id="migration_certificate" name="migration_certificate"  accept="application/pdf,application/msword"   >   
+                                        <button  class="btn clear-btn" style="font-size: 10px; padding:4px 10px" disabled>Clear</button>
+                                    </div>  
+                                </div>
+            
+                                <div class="input-field file-input">
+                                    <label  class="labels file-input-label required" for="transfer_certificate">Transfer Certificate (TC)<span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                    <div class="file-input-with-clear">
+                                        <input class="file-input-box" type="file" id="transfer_certificate" name="transfer_certificate"  accept="application/pdf,application/msword"  required >   
+                                        <button  class="btn clear-btn" style="font-size: 10px; padding:4px 10px" disabled>Clear</button>
+                                    </div>  
+                                </div>
+    
+                                <div class="input-field file-input">
+                                    <label  class="labels file-input-label required" for="bank_passbook">Bank passbook front page / Cancelled cheque leaf<span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                    <div class="file-input-with-clear">
+                                        <input class="file-input-box" type="file" id="bank_passbook" name="bank_passbook"  accept="application/pdf,application/msword"  required >   
+                                        <button  class="btn clear-btn" style="font-size: 10px; padding:4px 10px" disabled>Clear</button>
+                                    </div> 
+                                </div>
+    
+                                <div class="input-field file-input">
+                                    <label  class="labels file-input-label " for="community_certificate">Community Certificate (If Applicable)<span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                    <div class="file-input-with-clear">
+                                        <input class="file-input-box" type="file" id="community_certificate" name="community_certificate"  accept="application/pdf,application/msword"   >   
+                                        <button  class="btn clear-btn" style="font-size: 10px; padding:4px 10px" disabled>Clear</button>
+                                    </div> 
+                                </div>
+    
+                                <div class="input-field file-input">
+                                    <label  class="labels file-input-label required" for="aadhar_card">Aadhar Card <span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                    <div class="file-input-with-clear">
+                                        <input class="file-input-box" type="file" id="aadhar_card" name="aadhar_card"  accept="application/pdf,application/msword"  required >   
+                                        <button  class="btn clear-btn" style="font-size: 10px; padding:4px 10px" disabled>Clear</button>
+                                    </div> 
+                                </div>
+    
+                                <div class="input-field file-input">
+                                    <label  class="labels file-input-label " for="tnea_allotment_order">TNEA Allotment Order<span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                    <div class="file-input-with-clear">
+                                        <input class="file-input-box" type="file" id="tnea_allotment_order" name="tnea_allotment_order"  accept="application/pdf,application/msword"   >   
+                                        <button  class="btn clear-btn" style="font-size: 10px; padding:4px 10px" disabled>Clear</button>
+                                    </div> 
+                                </div>
+    
+                                <div class="input-field file-input">
+                                    <label  class="labels file-input-label " for="first_graduate_certificate">First Graduate Certificate<span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                    <div class="file-input-with-clear">
+                                        <input class="file-input-box" type="file" id="first_graduate_certificate" name="first_graduate_certificate"  accept="application/pdf,application/msword"   >   
+                                        <button  class="btn clear-btn" style="font-size: 10px; padding:4px 10px" disabled>Clear</button>
+                                    </div> 
+                                </div>
+    
+                                <div class="input-field file-input">
+                                    <label  class="labels file-input-label " for="joint_declarartion_form">First Graduate / Joint Declaration Form<span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                    <div class="file-input-with-clear">
+                                        <input class="file-input-box" type="file" id="joint_declarartion_form" name="joint_declarartion_form"  accept="application/pdf,application/msword"   >   
+                                        <button  class="btn clear-btn" style="font-size: 10px; padding:4px 10px" disabled>Clear</button>
+                                    </div> 
+                                </div>
+    
+                                <div class="input-field file-input">
+                                    <label  class="labels file-input-label " for="salary_certificate">Income Certificate / Salaray Certificate (If salary is Below 2.5 Lakhs)<span class="input-helper">( Size: 2MB, Type: doc, docx, pdf )</span></label>
+                                    <div class="file-input-with-clear">
+                                        <input class="file-input-box" type="file" id="salary_certificate" name="salary_certificate"  accept="application/pdf,application/msword"  >   
+                                        <button  class="btn clear-btn" style="font-size: 10px; padding:4px 10px" disabled>Clear</button>
+                                    </div> 
+                                </div>
+    
+                            </div>
+                            <div class="mybutton-container">
+                                <div class="left-button">
+                                    <button class="btn" id="prev" onclick="PrevNextHandler(event)">Prev</button>
+                                    <button class="btn" id="next" onclick="PrevNextHandler(event)" disabled>Next</button>
+                                </div>
+                                <div class="right-button">
+                                    <button class="btn form-submit" type="submit" id="submit" onclick="SubmitHandler(event)">Submit</button>
+                                </div>
+                        
+                            </div>  
+                            
+                        
+                    </div>
+                </div>
+              </div>
+
+        </form>
+        </div>
+      </div>
+    </main>
+
+    <!--===== MAIN JS =====-->
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/form.js"></script>
+    <script src="js/accordion.js"></script>
+  </body>
+</html>

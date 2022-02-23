@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- ===== CSS ===== -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+        <title>Document</title>
+    </head>
+    <body id="body-pd"> 
+        <header class="header" id="header">
+            <div class="header__toggle">
+                <i class='bx bx-menu myopenclose' id="header-toggle"></i>
+            </div>
+            <div class="header__img">
+                <img class="kct-logo" src="images/logo.png">
+            </div>
+        </header> 
+
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div>
+                    <div class="mylogocloseflex">
+                        <a href="#" class="nav__logo">
+                            <img src="images/kct-logo.png" alt="" >
+                            <span class="nav__logo-name">KCT-Admission</span>
+                        </a>
+                        <div class="myclosebtn">
+                            <i class='bx bx-menu bx-x' id="header-close-toggle"></i>
+                        </div>
+                    </div>
+                    
+
+                    <div class="nav__list">
+                        <a href="#" class="nav__link active-link">
+                            <i class='bx bx-grid-alt nav__icon' ></i>
+                            
+                            <span class="nav__name">Dashboard</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-stopwatch nav__icon'></i>
+                            <span class="nav__name">Campaigns</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-message-square-detail nav__icon' ></i>
+                            <span class="nav__name">Notification</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-list-ul nav__icon'></i>
+                            <span class="nav__name">Lists</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-bar-chart-alt-2 nav__icon' ></i>
+                            <span class="nav__name">Analytics</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-mail-send nav__icon'></i>
+                            <span class="nav__name">Support</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="#" class="nav__link">
+                    <i class='bx bx-log-out nav__icon' ></i>
+                    <span class="nav__name">Log Out</span>
+                </a>
+            </nav>
+        </div>
+        <main>
+          
+            <!--Block contents here-->
+            <div class="mycontainer">
+                <div class="form-header">
+                    <h1 class="form-heading">Educational Details</h1>
+                </div>
+                <div class="myform">
+                    <div class="progress-container">
+                        <div class="progress" id="progress"></div>
+                        <div class="circles">1</div>
+                        <div class="circles">2</div>
+                        <div class="circles active">3</div>
+                        <div class="circles">4</div>
+                        <div class="circles ">5</div>
+                        <div class="circles ">6</div>
+                        <div class="circles">7</div>
+                        <div class="circles">8</div>
+                        <div class="circles">9</div>
+                        <div class="circles">10</div>
+                    </div>
+                     
+                    <form method="POST">
+                        <!--Father Section-->
+                        <div class="form_sub_heading">
+                            <h3>SSLC Details</h3>
+                        </div>
+                        <div class="form-container">
+                            
+                            <div class="input-field">
+                                <label  class="labels required" for="sslc_register_no">Register No<span></span></label>
+                                <input type="text" id="sslc_register_no" name="sslc_register_no" onchange="InputHandler(event)" required >
+                            </div>
+        
+                            <div class="input-field">
+                                <label class="labels required" for="sslc_passing_year">Month and Year of Passing<span></span></label>
+                                <input type="month" id="sslc_passing_year" name="sslc_passing_year" min="2017-01" max="2022-12" onchange="InputHandler(event)" required >
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels required" for="sslc_board">Board<span></span></label>
+                                <select name="sslc_board" id="sslc_board" onchange="InputHandler(event)" required >
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="State Board">State Board</option>
+                                    <option value="CBSE">CBSE</option>
+                                    <option value="ICSE">ICSE</option>
+                                    <option value="ISC">ISC</option>
+                                    <option value="IB">IB</option>
+                                    <option value="IGCSE">IGCSE</option>
+                                    <option value="others">Others</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels required" for="sslc_medium">Medium<span></span></label>
+                                <select name="sslc_medium" id="sslc_medium" onchange="InputHandler(event)" required >
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="English">English</option>
+                                    <option value="Tamil">Tamil</option>
+                                    <option value="Telugu">Telugu</option>
+                                    <option value="Malayalam">Malayalam</option>
+                                    <option value="Kannada">Kannada</option>
+                                    <option value="Urdu">Urdu</option>
+                                    <option value="Hindi">Hindi</option>
+                                    <option value="Sanskrit">Sanskrit</option>
+                                    <option value="Arabic">Arabic</option>
+                                    <option value="French and German">French and German</option>
+                                    <option value="others">Others</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels required" for="sslc_school_name">Name of the School<span></span></label>
+                                <input type="text" id="sslc_school_name" name="sslc_school_name" onchange="InputHandler(event)" required >
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels required" for="sslc_school_place">Place of the School<span></span></label>
+                                <input type="text" id="sslc_school_place" name="sslc_school_place" onchange="InputHandler(event)" required >
+                            </div>
+
+                            <div class="input-field input-field-radio">
+                                <label class="labels required" for="sslc_school_type">Type of School<span></span></label>
+                                <div class="radio-flex">
+                                    <div class="radio-inner">
+                                        <input type="radio" id="radio_sslc_private" name="sslc_school_type" value="Private" required>
+                                        <label for="radio_sslc_private">Private</label><br>
+                                    </div>
+                                    <div class="radio-inner">
+                                        <input type="radio" id="radio_sslc_government" name="sslc_school_type" value="Government">
+                                        <label for="radio_sslc_government">Government</label><br>
+                                    </div>  
+                                    <div class="radio-inner">
+                                        <input type="radio" id="radio_sslc_other" name="sslc_school_type" value="Other">
+                                        <label for="radio_sslc_other">Other</label><br>
+                                    </div>                          
+                                </div>   
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels required" for="sslc_qualified_state">Qualified State<span></span></label>
+                                <select name="sslc_qualified_state" id="sslc_qualified_state" onchange="InputHandler(event)" required >
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                </select>
+                            </div>
+                            
+                            <div class="input-field">
+                                <label class="labels required" for="sslc_qualified_city">Qualified City<span></span></label>
+                                <select name="sslc_qualified_city" id="sslc_qualified_city" onchange="InputHandler(event)" required >
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Coimbatore">Coimbatore</option>
+                                    <option value="Madurai">Madurai</option>
+                                    <option value="Trichy">Trichy</option>
+                                </select>
+                            </div> 
+                        </div>
+        
+                        <br>
+                        <div class="form_sub_title">
+                            <h5>SSLC Marks</h5>
+                        </div>
+                        <div class="form-container">
+                            <div class="input-field markfield">
+                                <div class="markfield-border">
+                                    <label class="labels subject-label">Language<span></span></label>
+                                    <div class="scored_maximum">
+                                        <div class="label_input_combined">
+                                            <label  class="labels required" for="sslc_language_scored">Scored<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="sslc_language_scored" name="sslc_language_scored" onchange="InputHandler(event)" required >
+                                        </div>
+                                        <div class="label_input_combined">
+                                            <label  class="labels required" for="sslc_language_maximum">Maximum<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="sslc_language_maximum" name="sslc_language_maximum" onchange="InputHandler(event)" required >  
+                                        </div>
+                                    </div> 
+                                </div>                                 
+                            </div>
+                            <div class="input-field markfield">
+                                <div class="markfield-border">
+                                    <label class="labels subject-label">English<span></span></label>
+                                    <div class="scored_maximum">
+                                        <div class="label_input_combined">
+                                            <label  class="labels required" for="sslc_english_scored">Scored<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="sslc_english_scored" name="sslc_english_scored" onchange="InputHandler(event)" required >
+                                        </div>
+                                        <div class="label_input_combined">
+                                            <label  class="labels required" for="sslc_english_maximum">Maximum<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="sslc_english_maximum" name="sslc_english_maximum" onchange="InputHandler(event)" required >  
+                                        </div>
+                                    </div> 
+                                </div>
+                                                               
+                            </div>
+                            <div class="input-field markfield">
+                                <div class="markfield-border">
+                                    <label class="labels subject-label">Mathematics<span></span></label>
+                                    <div class="scored_maximum">
+                                        <div class="label_input_combined">
+                                            <label  class="labels required" for="sslc_mathematics_scored">Scored<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="sslc_mathematics_scored" name="sslc_mathematics_scored" onchange="InputHandler(event)" required >
+                                        </div>
+                                        <div class="label_input_combined">
+                                            <label  class="labels required" for="sslc_mathematics_maximum">Maximum<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="sslc_mathematics_maximum" name="sslc_mathematics_maximum" onchange="InputHandler(event)" required >  
+                                        </div>
+                                    </div>   
+                                </div>                               
+                            </div>
+
+                            <div class="input-field markfield">
+                                <div class="markfield-border">
+                                    <label class="labels subject-label">Science <span></span></label>
+                                    <div class="scored_maximum">
+                                        <div class="label_input_combined">
+                                            <label  class="labels required" for="sslc_science_scored">Scored<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="sslc_science_scored" name="sslc_science_scored" onchange="InputHandler(event)" required >
+                                        </div>
+                                        <div class="label_input_combined">
+                                            <label  class="labels required" for="sslc_science_maximum">Maximum<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="sslc_english_maximum" name="sslc_english_maximum" onchange="InputHandler(event)" required >  
+                                        </div>
+                                    </div> 
+                                </div>                                   
+                            </div>
+
+                            <div class="input-field markfield">
+                                <div class="markfield-border">
+                                    <label class="labels subject-label">Social Science <span></span></label>
+                                    <div class="scored_maximum">
+                                        <div class="label_input_combined">
+                                            <label  class="labels required" for="sslc_social_scored">Scored<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="sslc_social_scored" name="sslc_social_scored" onchange="InputHandler(event)" required >
+                                        </div>
+                                        <div class="label_input_combined">
+                                            <label  class="labels required" for="sslc_social_maximum">Maximum<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="sslc_social_maximum" name="sslc_social_maximum" onchange="InputHandler(event)" required >  
+                                        </div>
+                                    </div> 
+                                </div>                          
+                            </div>
+
+                            <div class="input-field markfield">
+                                <div class="markfield-border">
+                                    <div class="other-subject-field">
+                                        <label  class="labels" for="sslc_other_subject_name">Other Subject <span></span></label>
+                                        <input type="text" id="sslc_other_subject_name" name="sslc_other_subject_name" onchange="InputHandler(event)" required >
+                                    </div>
+                                    <div class="scored_maximum">
+                                        <div class="label_input_combined">
+                                            <label  class="labels " for="sslc_other_subject_scored">Scored<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="sslc_other_subject_scored" name="sslc_other_subject_scored" onchange="InputHandler(event)"  >
+                                        </div>
+                                        <div class="label_input_combined">
+                                            <label  class="labels" for="sslc_other_subject_maximum">Maximum<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="sslc_other_subject_maximum" name="sslc_other_subject_maximum" onchange="InputHandler(event)"  >  
+                                        </div>
+                                    </div> 
+                                </div>                          
+                            </div>
+
+                        </div>
+        <hr>
+                        <!--HSC +1 details-->
+                       <div class="form_sub_heading">
+                            <h3>HSC +1 Details</h3>
+                        </div>
+                        <div class="form-container">
+                            
+                            <div class="input-field">
+                                <label  class="labels" for="hsc_1_register_no">Register No<span></span></label>
+                                <input type="text" id="hsc_1_register_no" name="hsc_1_register_no" onchange="InputHandler(event)"  >
+                            </div>
+        
+                            <div class="input-field">
+                                <label class="labels" for="hsc_1_passing_year">Month and Year of Passing<span></span></label>
+                                <input type="month" id="hsc_1_passing_year" name="hsc_1_passing_year" min="2017-01" max="2022-12" onchange="InputHandler(event)">
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels" for="hsc_1_board">Board<span></span></label>
+                                <select name="hsc_1_board" id="hsc_1_board" onchange="InputHandler(event)" >
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="State Board">State Board</option>
+                                    <option value="CBSE">CBSE</option>
+                                    <option value="ICSE">ICSE</option>
+                                    <option value="ISC">ISC</option>
+                                    <option value="IB">IB</option>
+                                    <option value="IGCSE">IGCSE</option>
+                                    <option value="others">Others</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels" for="hsc_1_medium">Medium<span></span></label>
+                                <select name="hsc_1_medium" id="hsc_1_medium" onchange="InputHandler(event)" >
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="English">English</option>
+                                    <option value="Tamil">Tamil</option>
+                                    <option value="Telugu">Telugu</option>
+                                    <option value="Malayalam">Malayalam</option>
+                                    <option value="Kannada">Kannada</option>
+                                    <option value="Urdu">Urdu</option>
+                                    <option value="Hindi">Hindi</option>
+                                    <option value="Sanskrit">Sanskrit</option>
+                                    <option value="Arabic">Arabic</option>
+                                    <option value="French and German">French and German</option>
+                                    <option value="others">Others</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels" for="hsc_1_school_name">Name of the School<span></span></label>
+                                <input type="text" id="hsc_1_school_name" name="hsc_1_school_name" onchange="InputHandler(event)">
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels" for="hsc_1_school_place">Place of the School<span></span></label>
+                                <input type="text" id="hsc_1_school_place" name="hsc_1_school_place" onchange="InputHandler(event)">
+                            </div>
+
+                            <div class="input-field input-field-radio">
+                                <label class="labels" for="hsc_1_school_type">Type of School<span></span></label>
+                                <div class="radio-flex">
+                                    <div class="radio-inner">
+                                        <input type="radio" id="radio_hsc_1_private" name="hsc_1_school_type" value="Private">
+                                        <label for="radio_hsc_1_private">Private</label><br>
+                                    </div>
+                                    <div class="radio-inner">
+                                        <input type="radio" id="radio_hsc_1_government" name="hsc_1_school_type" value="Government">
+                                        <label for="radio_hsc_1_government">Government</label><br>
+                                    </div>  
+                                    <div class="radio-inner">
+                                        <input type="radio" id="radio_hsc_1_other" name="hsc_1_school_type" value="Other">
+                                        <label for="radio_hsc_1_other">Other</label><br>
+                                    </div>                          
+                                </div>   
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels" for="hsc_1_qualified_state">Qualified State<span></span></label>
+                                <select name="hsc_1_qualified_state" id="hsc_1_qualified_state" onchange="InputHandler(event)">
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                </select>
+                            </div>
+                            
+                            <div class="input-field">
+                                <label class="labels" for="hsc_1_qualified_city">Qualified City<span></span></label>
+                                <select name="hsc_1_qualified_city" id="hsc_1_qualified_city" onchange="InputHandler(event)">
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Coimbatore">Coimbatore</option>
+                                    <option value="Madurai">Madurai</option>
+                                    <option value="Trichy">Trichy</option>
+                                </select>
+                            </div> 
+
+                            <div class="input-field">
+                                <label class="labels" for="hsc_1_group_name">Group Name<span></span></label>
+                                <select name="hsc_1_group_name" id="hsc_1_group_name" onchange="InputHandler(event)">
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="default-group">default-group</option>
+                                    
+                                </select>
+                            </div>
+
+                        </div>
+        
+                        <br>
+                        <div class="form_sub_title">
+                            <h5>HSC +1 Marks</h5>
+                        </div>
+                        <div class="form-container">
+                            <div class="input-field markfield">
+                                <div class="markfield-border">
+                                    <label class="labels subject-label">Language<span></span></label>
+                                    <div class="scored_maximum">
+                                        <div class="label_input_combined">
+                                            <label  class="labels" for="hsc_1_language_scored">Scored<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="hsc_1_language_scored" name="hsc_1_language_scored" onchange="InputHandler(event)" >
+                                        </div>
+                                        <div class="label_input_combined">
+                                            <label  class="labels" for="hsc_1_language_maximum">Maximum<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="hsc_1_language_maximum" name="hsc_1_language_maximum" onchange="InputHandler(event)"  >  
+                                        </div>
+                                    </div> 
+                                </div>                                 
+                            </div>
+                            
+                            <div class="input-field markfield">
+                                <div class="markfield-border">
+                                    <label class="labels subject-label">Mathematics<span></span></label>
+                                    <div class="scored_maximum">
+                                        <div class="label_input_combined">
+                                            <label  class="labels" for="hsc_1_mathematics_scored">Scored<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="hsc_1_mathematics_scored" name="hsc_1_mathematics_scored" onchange="InputHandler(event)">
+                                        </div>
+                                        <div class="label_input_combined">
+                                            <label  class="labels" for="hsc_1_mathematics_maximum">Maximum<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="hsc_1_mathematics_maximum" name="hsc_1_mathematics_maximum" onchange="InputHandler(event)" >  
+                                        </div>
+                                    </div>   
+                                </div>                               
+                            </div>
+
+                            
+
+                            <div class="input-field markfield">
+                                <div class="markfield-border">
+                                    <div class="other-subject-field">
+                                        <label  class="labels" for="hsc_1_other_subject_name">Other Subject <span></span></label>
+                                        <input type="text" id="hsc_1_other_subject_name" name="hsc_1_other_subject_name" onchange="InputHandler(event)" required >
+                                    </div>
+                                    <div class="scored_maximum">
+                                        <div class="label_input_combined">
+                                            <label  class="labels " for="hsc_1_other_subject_scored">Scored<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="hsc_1_other_subject_scored" name="hsc_1_other_subject_scored" onchange="InputHandler(event)"  >
+                                        </div>
+                                        <div class="label_input_combined">
+                                            <label  class="labels" for="hsc_1_other_subject_maximum">Maximum<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="hsc_1_other_subject_maximum" name="hsc_1_other_subject_maximum" onchange="InputHandler(event)"  >  
+                                        </div>
+                                    </div> 
+                                </div>                          
+                            </div>
+
+                            <div class="input-field markfield">
+                                <div class="markfield-border">
+                                    <label class="labels subject-label">Total Marks<span></span></label>
+                                    <div class="scored_maximum">
+                                        <div class="label_input_combined">
+                                            <label  class="labels" for="hsc_1_total_scored">Scored<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="hsc_1_total_scored" name="hsc_1_total_scored" onchange="InputHandler(event)">
+                                        </div>
+                                        <div class="label_input_combined">
+                                            <label  class="labels" for="hsc_1_total_maximum">Maximum<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="hsc_1_total_maximum" name="hsc_1_total_maximum" onchange="InputHandler(event)" >  
+                                        </div>
+                                    </div>   
+                                </div>                               
+                            </div>
+
+                        </div>
+
+                        <!--HSC +2-->
+
+                        <div class="form_sub_heading">
+                            <h3>HSC +2 Details</h3>
+                        </div>
+                        <div class="form-container">
+                            
+                            <div class="input-field">
+                                <label  class="labels" for="hsc_2_register_no">Register No<span></span></label>
+                                <input type="text" id="hsc_2_register_no" name="hsc_2_register_no" onchange="InputHandler(event)"  >
+                            </div>
+        
+                            <div class="input-field">
+                                <label class="labels" for="hsc_2_passing_year">Month and Year of Passing<span></span></label>
+                                <input type="month" id="hsc_2_passing_year" name="hsc_2_passing_year" min="2017-01" max="2022-12" onchange="InputHandler(event)">
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels" for="hsc_2_board">Board<span></span></label>
+                                <select name="hsc_2_board" id="hsc_2_board" onchange="InputHandler(event)" >
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="State Board">State Board</option>
+                                    <option value="CBSE">CBSE</option>
+                                    <option value="ICSE">ICSE</option>
+                                    <option value="ISC">ISC</option>
+                                    <option value="IB">IB</option>
+                                    <option value="IGCSE">IGCSE</option>
+                                    <option value="others">Others</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels" for="hsc_2_medium">Medium<span></span></label>
+                                <select name="hsc_2_medium" id="hsc_2_medium" onchange="InputHandler(event)" >
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="English">English</option>
+                                    <option value="Tamil">Tamil</option>
+                                    <option value="Telugu">Telugu</option>
+                                    <option value="Malayalam">Malayalam</option>
+                                    <option value="Kannada">Kannada</option>
+                                    <option value="Urdu">Urdu</option>
+                                    <option value="Hindi">Hindi</option>
+                                    <option value="Sanskrit">Sanskrit</option>
+                                    <option value="Arabic">Arabic</option>
+                                    <option value="French and German">French and German</option>
+                                    <option value="others">Others</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels" for="hsc_2_school_name">Name of the School<span></span></label>
+                                <input type="text" id="hsc_2_school_name" name="hsc_2_school_name" onchange="InputHandler(event)">
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels" for="hsc_2_school_place">Place of the School<span></span></label>
+                                <input type="text" id="hsc_2_school_place" name="hsc_2_school_place" onchange="InputHandler(event)">
+                            </div>
+
+                            <div class="input-field input-field-radio">
+                                <label class="labels" for="hsc_2_school_type">Type of School<span></span></label>
+                                <div class="radio-flex">
+                                    <div class="radio-inner">
+                                        <input type="radio" id="radio_hsc_2_private" name="hsc_2_school_type" value="Private">
+                                        <label for="radio_hsc_2_private">Private</label><br>
+                                    </div>
+                                    <div class="radio-inner">
+                                        <input type="radio" id="radio_hsc_2_government" name="hsc_2_school_type" value="Government">
+                                        <label for="radio_hsc_2_government">Government</label><br>
+                                    </div>  
+                                    <div class="radio-inner">
+                                        <input type="radio" id="radio_hsc_2_other" name="hsc_2_school_type" value="Other">
+                                        <label for="radio_hsc_2_other">Other</label><br>
+                                    </div>                          
+                                </div>   
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels" for="hsc_2_qualified_state">Qualified State<span></span></label>
+                                <select name="hsc_2_qualified_state" id="hsc_2_qualified_state" onchange="InputHandler(event)">
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                </select>
+                            </div>
+                            
+                            <div class="input-field">
+                                <label class="labels" for="hsc_2_qualified_city">Qualified City<span></span></label>
+                                <select name="hsc_2_qualified_city" id="hsc_2_qualified_city" onchange="InputHandler(event)">
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Coimbatore">Coimbatore</option>
+                                    <option value="Madurai">Madurai</option>
+                                    <option value="Trichy">Trichy</option>
+                                </select>
+                            </div> 
+
+                            <div class="input-field">
+                                <label class="labels" for="hsc_2_group_name">Group Name<span></span></label>
+                                <select name="hsc_2_group_name" id="hsc_2_group_name" onchange="InputHandler(event)">
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="default-group">default-group</option>
+                                    
+                                </select>
+                            </div>
+
+                            <div class="input-field input-field-radio">
+                                <label class="labels" for="hsc_2_area_type">Type of Area<span></span></label>
+                                <div class="radio-flex">
+                                    <div class="radio-inner">
+                                        <input type="radio" id="radio_hsc_2_Rural" name="hsc_2_area_type" value="Rural">
+                                        <label for="radio_hsc_2_Rural">Rural</label><br>
+                                    </div>
+                                    <div class="radio-inner">
+                                        <input type="radio" id="radio_hsc_2_urban" name="hsc_2_area_type" value="Urban">
+                                        <label for="radio_hsc_2_urban">Urban</label><br>
+                                    </div>  
+                                    <div class="radio-inner">
+                                        <input type="radio" id="radio_hsc_2_other_area" name="hsc_2_area_type" value="Other">
+                                        <label for="radio_hsc_2_other_area">Other</label><br>
+                                    </div>                          
+                                </div>   
+                            </div>
+
+                        </div>
+        
+                        <br>
+                        <div class="form_sub_title">
+                            <h5>HSC +2 Marks</h5>
+                        </div>
+                        <div class="form-container">
+                            <div class="input-field markfield">
+                                <div class="markfield-border">
+                                    <label class="labels subject-label">Language<span></span></label>
+                                    <div class="scored_maximum">
+                                        <div class="label_input_combined">
+                                            <label  class="labels" for="hsc_2_language_scored">Scored<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="hsc_2_language_scored" name="hsc_2_language_scored" onchange="InputHandler(event)" >
+                                        </div>
+                                        <div class="label_input_combined">
+                                            <label  class="labels" for="hsc_2_language_maximum">Maximum<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="hsc_2_language_maximum" name="hsc_2_language_maximum" onchange="InputHandler(event)"  >  
+                                        </div>
+                                    </div> 
+                                </div>                                 
+                            </div>
+                            
+                            <div class="input-field markfield">
+                                <div class="markfield-border">
+                                    <label class="labels subject-label">Mathematics<span></span></label>
+                                    <div class="scored_maximum">
+                                        <div class="label_input_combined">
+                                            <label  class="labels" for="hsc_2_mathematics_scored">Scored<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="hsc_2_mathematics_scored" name="hsc_2_mathematics_scored" onchange="InputHandler(event)">
+                                        </div>
+                                        <div class="label_input_combined">
+                                            <label  class="labels" for="hsc_2_mathematics_maximum">Maximum<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="hsc_2_mathematics_maximum" name="hsc_2_mathematics_maximum" onchange="InputHandler(event)" >  
+                                        </div>
+                                    </div>   
+                                </div>                               
+                            </div>
+
+                            
+
+                            <div class="input-field markfield">
+                                <div class="markfield-border">
+                                    <div class="other-subject-field">
+                                        <label  class="labels" for="hsc_2_other_subject_name">Other Subject <span></span></label>
+                                        <input type="text" id="hsc_2_other_subject_name" name="hsc_2_other_subject_name" onchange="InputHandler(event)" required >
+                                    </div>
+                                    <div class="scored_maximum">
+                                        <div class="label_input_combined">
+                                            <label  class="labels " for="hsc_2_other_subject_scored">Scored<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="hsc_2_other_subject_scored" name="hsc_2_other_subject_scored" onchange="InputHandler(event)"  >
+                                        </div>
+                                        <div class="label_input_combined">
+                                            <label  class="labels" for="hsc_2_other_subject_maximum">Maximum<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="hsc_2_other_subject_maximum" name="hsc_2_other_subject_maximum" onchange="InputHandler(event)"  >  
+                                        </div>
+                                    </div> 
+                                </div>                          
+                            </div>
+
+                            <div class="input-field markfield">
+                                <div class="markfield-border">
+                                    <label class="labels subject-label">Total Marks<span></span></label>
+                                    <div class="scored_maximum">
+                                        <div class="label_input_combined">
+                                            <label  class="labels" for="hsc_2_total_scored">Scored<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="hsc_2_total_scored" name="hsc_2_total_scored" onchange="InputHandler(event)">
+                                        </div>
+                                        <div class="label_input_combined">
+                                            <label  class="labels" for="hsc_2_total_maximum">Maximum<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="hsc_2_total_maximum" name="hsc_2_total_maximum" onchange="InputHandler(event)" >  
+                                        </div>
+                                    </div>   
+                                </div>                               
+                            </div>
+
+                            <div class="input-field markfield">
+                                <div class="markfield-border">
+                                    <label class="labels subject-label">Cut Of Marks<span></span></label>
+                                    <div class="scored_maximum">
+                                        <div class="label_input_combined">
+                                            <label  class="labels" for="hsc_2_cutoff_scored">Scored<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="hsc_2_cutoff_scored" name="hsc_2_cutoff_scored" onchange="InputHandler(event)">
+                                        </div>
+                                        <div class="label_input_combined">
+                                            <label  class="labels" for="hsc_2_cutoff_maximum">Maximum<span></span></label>
+                                            <input class="markinputfield" type='number' min="0" id="hsc_2_cutoff_maximum" name="hsc_2_cutoff_maximum" onchange="InputHandler(event)" >  
+                                        </div>
+                                    </div>   
+                                </div>                               
+                            </div>
+
+                        </div>
+                        
+        
+        <!--Next Prev Button Section-->
+                       
+        
+                        <div class="mybutton-container">
+                            <a href=""><button class="btn" id="prev">Prev</button></a>
+                            <a href=""><button class="btn" id="next">Next</button></a>
+                        </div>
+                        
+                    </form>
+                </div>  
+            </div>
+
+        </main>
+        
+        <!--===== MAIN JS =====-->
+        <script src="js/main.js"></script>
+        <script type="text/javascript" src="js/form.js" ></script>
+    </body>
+</html>
+

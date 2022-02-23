@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- ===== CSS ===== -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+        <title>Document</title>
+    </head>
+    <body id="body-pd"> 
+        <header class="header" id="header">
+            <div class="header__toggle">
+                <i class='bx bx-menu myopenclose' id="header-toggle"></i>
+            </div>
+            <div class="header__img">
+                <img class="kct-logo" src="images/logo.png">
+            </div>
+        </header> 
+
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div>
+                    <div class="mylogocloseflex">
+                        <a href="#" class="nav__logo">
+                            <img src="images/kct-logo.png" alt="" >
+                            <span class="nav__logo-name">KCT-Admission</span>
+                        </a>
+                        <div class="myclosebtn">
+                            <i class='bx bx-menu bx-x' id="header-close-toggle"></i>
+                        </div>
+                    </div>
+                    
+
+                    <div class="nav__list">
+                        <a href="#" class="nav__link active-link">
+                            <i class='bx bx-grid-alt nav__icon' ></i>
+                            
+                            <span class="nav__name">Dashboard</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-stopwatch nav__icon'></i>
+                            <span class="nav__name">Campaigns</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-message-square-detail nav__icon' ></i>
+                            <span class="nav__name">Notification</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-list-ul nav__icon'></i>
+                            <span class="nav__name">Lists</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-bar-chart-alt-2 nav__icon' ></i>
+                            <span class="nav__name">Analytics</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-mail-send nav__icon'></i>
+                            <span class="nav__name">Support</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="#" class="nav__link">
+                    <i class='bx bx-log-out nav__icon' ></i>
+                    <span class="nav__name">Log Out</span>
+                </a>
+            </nav>
+        </div>
+        <main>
+          
+            <!--Block contents here-->
+            <div class="mycontainer">
+                <div class="form-header">
+                    <h1 class="form-heading">Address Details</h1>
+                </div>
+                <div class="myform">
+                    <div class="progress-container">
+                        <div class="progress" id="progress"></div>
+                        <div class="circles">1</div>
+                        <div class="circles">2</div>
+                        <div class="circles">3</div>
+                        <div class="circles">4</div>
+                        <div class="circles ">5</div>
+                        <div class="circles active">6</div>
+                        <div class="circles">7</div>
+                        <div class="circles">8</div>
+                        <div class="circles">9</div>
+                        <div class="circles">10</div>
+                    </div>
+                     
+                    <form method="POST">
+                        <!--Father Section-->
+                        <div class="form_sub_heading">
+                            <h3>Present Communication Details</h3>
+                        </div>
+                        <div class="form-container">
+                            
+                            <div class="input-field">
+                                <label  class="labels required" for="door-house-name">Door No/House Name<span></span></label>
+                                <input type="text" id="door-house-name" name="door-house-name" onchange="InputHandler(event)" required >
+                            </div>
+        
+                            <div class="input-field">
+                                <label class="labels required" for="street_name">Street Name<span></span></label>
+                                <input type="text" id="street_name" name="street_name" onchange="InputHandler(event)" required >
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels required" for="village-town">Village/Town<span></span></label>
+                                <select name="village_town" id="village_town" onchange="InputHandler(event)" required >
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="Private">Village</option>
+                                    <option value="Public Sector">Town</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels required" for="taluk">Taluk<span></span></label>
+                                <input type="text" id="taluk" name="taluk" onchange="InputHandler(event)" required >
+                            </div>
+        
+                            <div class="input-field">
+                                <label class="labels required" for="country">Country<span></span></label>
+                                <select name="country" id="country" onchange="InputHandler(event)" required >
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="india">India</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="australia">Australia</option>
+                                    <option value="united Kingdom">United Kingdom</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels required" for="state">State<span></span></label>
+                                <select name="state" id="state" onchange="InputHandler(event)" required >
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="tamilnadu">Tamil Nadu</option>
+                                    <option value="kerala">Kerala</option>
+                                    <option value="karnataka">Karnataka</option>
+                                    <option value="bihar">Bihar</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels required" for="city">City<span></span></label>
+                                <select name="city" id="city" onchange="InputHandler(event)" required >
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="coimbatore">Coimbatore</option>
+                                    <option value="chennai">Chennai</option>
+                                    <option value="madurai">Madurai</option>
+                                    <option value="trichy">Trichy</option>
+                                </select>
+                            </div>
+        
+                            <div class="input-field">
+                                <label class="labels required" for="pincode">Pincode<span></span></label>
+                                <input type="text" id="pincode" name="pincode" required onchange="InputHandler(event)">
+                            </div>
+                        </div>
+        
+                        <hr>
+        
+                        <!--Permanent Communication details-->
+                        <div class="form_sub_heading">
+                            <h3>Permanent Communication Details</h3>
+                        </div>
+                        <div class="form-container">
+                            
+                            <div class="input-field">
+                                <label  class="labels required" for="door-house-name">Door No/House Name<span></span></label>
+                                <input type="text" id="door-house-name" name="door-house-name" onchange="InputHandler(event)" required >
+                            </div>
+        
+                            <div class="input-field">
+                                <label class="labels required" for="street_name">Street Name<span></span></label>
+                                <input type="text" id="street_name" name="street_name" onchange="InputHandler(event)" required >
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels required" for="village-town">Village/Town<span></span></label>
+                                <select name="village_town" id="village_town" onchange="InputHandler(event)" required >
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="Private">Village</option>
+                                    <option value="Public Sector">Town</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels required" for="taluk">Taluk<span></span></label>
+                                <input type="text" id="taluk" name="taluk" onchange="InputHandler(event)" required >
+                            </div>
+        
+                            <div class="input-field">
+                                <label class="labels required" for="country">Country<span></span></label>
+                                <select name="country" id="country" onchange="InputHandler(event)" required >
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="india">India</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="australia">Australia</option>
+                                    <option value="united Kingdom">United Kingdom</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels required" for="state">State<span></span></label>
+                                <select name="state" id="state" onchange="InputHandler(event)" required >
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="tamilnadu">Tamil Nadu</option>
+                                    <option value="kerala">Kerala</option>
+                                    <option value="karnataka">Karnataka</option>
+                                    <option value="bihar">Bihar</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label class="labels required" for="city">City<span></span></label>
+                                <select name="city" id="city" onchange="InputHandler(event)" required >
+                                    <option value="" selected disabled>---Select---</option>
+                                    <option value="coimbatore">Coimbatore</option>
+                                    <option value="chennai">Chennai</option>
+                                    <option value="madurai">Madurai</option>
+                                    <option value="trichy">Trichy</option>
+                                </select>
+                            </div>
+        
+                            <div class="input-field">
+                                <label class="labels required" for="pincode">Pincode<span></span></label>
+                                <input type="text" id="pincode" name="pincode" required onchange="InputHandler(event)">
+                            </div>
+                        </div>
+        
+        <!--Next Prev Button Section-->
+                       
+        
+                        <div class="mybutton-container">
+                            <a href=""><button class="btn" id="prev">Prev</button></a>
+                            <a href=""><button class="btn" id="next">Next</button></a>
+                        </div>
+                        
+                    </form>
+                </div>  
+            </div>
+
+        </main>
+        
+        <!--===== MAIN JS =====-->
+        <script src="js/main.js"></script>
+        <script type="text/javascript" src="js/form.js" ></script>
+    </body>
+</html>
+
